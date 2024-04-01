@@ -1,3 +1,27 @@
+header {
+    display: flex;
+    background-color: #D8D8D8;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo{
+    display: flex;
+}
+
+.logo img{
+    height: 100px;
+}
+
+.logoing {
+    display: flex;
+    text-align: right;
+}
+
+.logoing img{
+    height: 100px;
+}
 
 body {
     font-family: Arial, sans-serif;
