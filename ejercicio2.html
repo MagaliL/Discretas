@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="Author" content="Equipo 5"><!--Autor-->
+
+    <title>Sistemas algebraicos. La aritmética de residuos en las computadoras. Aplicaciones en las computadoras.</title>
+
+	<!--Descripción del tutorial-->
+	<meta name="Description" content="Sistemas algebraicos. La aritmética de residuos en las computadoras. Aplicaciones en las computadoras."/>
+	<!--Palabras clave-->
+	<meta name="Keywords" content="modulo, enteros, divisibilidad"/>
+    
+    
+	<script src="media/js/jq.js" type="text/javascript"></script>
+	<script src="media/js/m.js" type="text/javascript"></script>
+	<script src="media/js/ui.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="media/css/ui.css" type="text/css">
+</head>
+<body>
+
+    <h1 style="color:#B989FF ;">Resolución:</h1> <br><br><br>
+    <h2>
+    
+    Ejercicio de: Epp, S. S. (2012). Matemáticas Discretas Con Aplicaciones (4ta ed.). Cengage Learning. <br><br>
+
+    Cuando sea realice a mano la división se obtienen los siguientes resultados:  <br><br><br>
+	
+	<div class="solucion" style="display: none;">
+		
+	<center><img src="media/img/ejercicio3.PNG" alt=""></center> <br><br><br>
+
+    El enfoque de cada una de las operaciones es diferente, en el sentido en que con la división normal el resultado que nos interesa es el <b>cociente</b>, mientras que en el módulo se presta atención al <b>residuo</b> <br><br>
+	
+    Si utiliza una calculadora de cuatro funciones para dividir 32 entre 9, se obtiene una expresión como 3.555555556. Descartando la parte fraccionaria da 32 div 9 = 3 y así: <br><br>
+	</div>
+	<div class="solucion" style="display: none;">
+			<center><i>32 mod 9 = <br>
+                 32 - 9 * (32 ÷  9) = <br>
+                  32 - 9* (3) = <br>
+                  32 - 27 = 5
+		</i></center> <br><br>
+
+	</div>
+	<div class="solucion" style="display: none;">
+		Una calculadora con una función de parte entera integrada iPart permite introducir una sola expresión para cada cálculo: <br><br>
+
+		<center><i>32 / 9 = iPart(32/9) <br><br>
+			y 32 mod 9 = 32 - 9 * iPart(32/9) = 5
+			</i></center> <br><br><br><br>
+
+	</div>
+			
+			<center> <a href="javascript:void(0);" onclick="mostrarSiguienteSolucion();">Siguiente</a> </center>
+        
+			<br><br><br>
+			
+			<center><a href="ejemplos.html">Regresar</a></center><br>
+	
+			<script>
+				var currentSolucionIndex = 0;
+		
+				function mostrarSiguienteSolucion() {
+					var soluciones = document.querySelectorAll('.solucion');
+		
+					if (currentSolucionIndex < soluciones.length) {
+						soluciones[currentSolucionIndex].style.display = 'block';
+						currentSolucionIndex++;
+					}
+				}
+			</script>
+			
+        </h2>
+</body>
+</html>

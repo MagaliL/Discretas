@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="Author" content="Equipo 5"><!--Autor-->
+	<script src="media/js/jq.js" type="text/javascript"></script>
+	<script src="media/js/m.js" type="text/javascript"></script>
+	<script src="media/js/ui.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="media/css/ui.css" type="text/css">
+	
+</head>
+<body>
+
+	<!-- Contenido teórico -->
+	
+
+	<br><br><br>
+	<h1 style = "color:#B989FF" >Aritmética de Residuos</h1>
+	<br><br><br>
+
+	<h1 style="color: blueviolet;">Sistemas numéricos</h1> <br><br>
+		<h5>
+			La información es uno de los recursos más valiosos que posee el ser humano, se puede administrar, modificar, comercializar y transmitir. Para ello, la manipulación de la información se lleva a cabo mediante representaciones que pueden ir desde símbolos hasta gráficos y otros tipos de diseño. <br><br>
+
+			Las computadoras operan principalmente con dos tipos de elementos de información: instrucciones y datos; los cuales pueden adoptar diversas representaciones a nivel de máquina, determinando así las características de funcionamiento y la estructura del sistema. <br><br>
+			
+			Por lo tanto, el estudio de los sistemas de representación de información es esencial para comprender los procesos de tratamiento de datos. Con este propósito, se establecen tres criterios de clasificación: <br><br>
+
+			<ol>
+					<li> Elemento primario a representar: cifra, letra, carácter especial, entre otros.</li>
+				<li>Forma de representación: punto fijo, punto flotante, empaquetado, etc.</li>
+				<li>Características de representación: tolerante a fallos, con prioridad, etc.</li>
+			</ol><br><br>
+		
+			Estos criterios permiten identificar diversos tipos de representación:	<br><br>
+
+
+			<img src="media/img/Tiposderepresentacion.PNG" alt="representacion de datos"> <br><br>
+
+			Cabe destacar que de las representaciones numéricas, la que más influye sobre la arquitectura de la máquina es la de las representaciones numéricas, pues constituye el fundamento para la codificación de cantidades y proporciona elementos para organizar una aritmética computacional. <br><br>
+
+			Investigaciones recientes han revelado que los sistemas numéricos posicionales no son suficientes para lograr un aumento significativo en la velocidad de procesamiento de la información, ni tampoco contribuyen a mejorar los niveles de desempeño y productividad. Además, los acarreos generados durante la ejecución de algunas de sus operaciones añaden complejidad al hardware y al sistema. <br><br>
+			
+			Por lo mismo, se han explorado alternativas de nuevos sistemas numéricos "no posicionales". Estos sistemas, como la aritmética modular o la aritmética de residuos, han surgido como opciones que no implican la generación de acarreos. <br><br>
+		</h5>
+
+	<h1 style="color: blueviolet;">Aritmética de residuos</h1> <br><br>
+
+	    <h5> 
+			La aritmética residual, también conocida como aritmética modular o aritmética de congruencia, es un área de las matemáticas que se centra en el estudio de los <b>números enteros</b> en relación con un número fijo llamado <b>módulo</b>. Esta área tiene aplicaciones prácticas en campos como la criptografía, la informática, la teoría de números y la ingeniería. <br><br>
+
+			La aritmética modular se enfoca en cómo se comportan los números enteros cuando los consideramos en grupos de tamaño fijo determinado por el módulo. Por ejemplo: si consideramos los números enteros módulo 5, estamos agrupando todos los enteros en cinco conjuntos diferentes, según su residuo al dividirlos por 5.<br><br>
+			
+			Esta área del conocimiento permite realizar todas las operaciones aritméticas (<b>suma, resta y multiplicación</b>), excepto la división, que son por principio procedimientos sin acarreos. Cada dígito en el resultado es una función sólo de dígitos correspondientes a los operandos.<br><br>
+		</h5>
+	
+	<h1 style="color: blueviolet;">Congruencia y sus propiedades</h1> <br><br>
+			
+		<h5>
+			La aritmética residual se basa en el concepto de <b>congruencia</b>, que es fundamental para entender cómo funciona. Dos números enteros <b>a</b> y <b>b</b> se consideran congruentes módulo <b>m</b>, denotado como: <b>a≡b (mod m)</b>, si su diferencia <b>a−b</b> es un múltiplo de <b>m</b>. En otras palabras, <b>a</b> y <b>b</b> tienen el mismo residuo cuando se dividen por <b>m</b>.<br><br>
+			
+			<br>
+			<center><b>a≡b (mod m)</b></center>
+			<br><br><br>
+
+			Por ejemplo, si tomamos los números enteros <b>7</b> y <b>17</b>, ambos son congruentes módulo <b>5</b>, ya que su diferencia es <b>17−7=10</b>, que es un múltiplo de <b>5</b>.<br><br>
+			
+			Asimismo, una de las ventajas de trabajar con este concepto es la posibilidad de manejar <b>clases de equivalencia de números enteros</b>. En lugar de operar con números individuales, operamos con clases de números que comparten el mismo residuo módulo m. Estas clases se conocen como <b>clases de congruencia</b> y están formadas por todos los números enteros que son congruentes entre sí módulo m.<br><br>
+
+			Para comprender mejor el concepto de congruencia y las clases de congruencia con el siguiente ejemplo: <br>
+
+			Si calculamos mod 5 para todos los enteros. Se supone que se etiquetan 5 rebanadas (0,1,2,3,4) y para cada número entero, al dividirlo por 5, se le clasifica de acuerdo a su residuo. <br><br><br><br>
+
+			<img src="media/img/congruenciaclases.PNG" alt=""> <br><br><br><br>
+
+			Así 27 iría en la rebanada etiquetada con el número 2 porque 27 mod 5 = 2 y para expresar los números que pertenecen a la misma rebanada que el 27, es decir de la misma clase de congruencia, se usa la expresión anterior: <br><br>
+
+			<b><center>a ≡ b (mod m)</center></b> <br><br>
+
+			Ejemplo: <br><br>
+
+			26 ≡ 11 (mod 5) <br>
+
+			26 es congruente a 11 módulo 5 <br>
+			26 mod 5 = 1 <br>
+			11 mod 5 = 1 <br> <br>
+
+			26 y 11 tienen el mismo residuo, tienen la misma clase de congruencia <br><br>
+
+			<b>Propiedades de congruencia:</b> <br><br>
+
+			<img src="media/img/pcongruencia.PNG" alt=""><br><br><br>
+
+			<b>Teorema de congruencia lineal</b> <br><br>
+
+			Sean <b>a</b> y <b>b</b> dos números enteros y <b>m</b> un entero positivo, entonces la congruencia se describe: <br><br>
+
+			<center><b>ax ≡ b (mod m)</b></center> <br><br>
+
+			En la que una solución para <b>x</b> si y sólo si b es divisible por el máximo común divisor de <b>a</b> y <b>m</b>. Existirán exactamente soluciones <b>d = mcd(a,m)</b> en el conjunto de residuos si y sólo si <b>b/d</b><br><br>
+
+			Una vez se encuentra x<sub>0</sub>, las demás soluciones se encuentran de acuerdo a la siguiente expresión: <br><br>
+			
+				<center><b>{x<sub>0</sub> + km/d} </b></center> <br><br>
+			
+			donde x<sub>0</sub> es una solución particular y <b>0 ≤ k < d</b> <br><br><br>
+
+			Ejemplo: <br><br>
+
+							
+				Encontrar todas las soluciones <br><br>
+
+				<center>9x ≡ 12 (mod 15)</center> <br><br>
+
+				1) Encontrar el máximo común divisor de <b>a</b> y <b>m</b><br>
+
+				<b>mcd (9,15) = 3</b> ; por lo tanto la expresión tiene 3 soluciones, <b>d = 3</b>. <br><br>
+
+				2) Desglosar a <b>a</b> y <b>m</b>: <br><br>
+
+				15 = 9*1 + <b>6</b>  -> 9*1 es 9, 9+6 = 15 <br>
+				9 = 6*1 + <b>3</b>    -> 6*1 es 6, 6+3 = 9 <br><br>
+
+				Una vez encontrado el residuo 3, que es el mcd de <b>a</b> y <b>m</b>. <br><br> 
+
+				3) Despejar  residuos: <br><br>
+
+				6 = 15 - 9*1 <br>
+				3 = 9 - 6*1 <br><br><br>
+
+				4) Se toma el despeje que contenga al mcd de <b>a</b> y <b>m</b>, y sustituye con los factores obtenidos. <br><br>
+
+				3= 9 - 6*1  -> se sustituye a 6 con el despeje anterior y se simplifica: <br><br>
+
+				3= 9 - (15 - 9*1)*1 <br>
+				3= 9 - (15 + 9*1) <br>
+				3= 9 - 15 * 9 <br>
+				3= 9*2 - 15 <br><br>
+
+				5) Multiplicar a la expresión por un número que nos de <b>b</b>, en este caso 12. <br><br>
+
+				4(3 = 9*2 - 15) <br>
+				12 =<b> 9*8 </b>- 15*4 <br><br>
+
+				de acuerdo a la expresión original: <br><br>
+
+				<center>9x ≡ 12 (mod 15) <br>
+
+				x<sub>0</sub> = 8 <br><br></center>
+
+
+				6) A partir de x0 se pueden encontrar las otras dos soluciones utilizando: <br><br>
+
+				<center><b>{x<sub>0</sub> + km/d} </b></center> <br>
+				<center><b>0 ≤ k < d</b></center><br>
+				<center><b>k= {0,1,2}</b></center>
+
+				x<sub>0</sub>= 8 <br><br>
+
+				<b>Para x<sub>1</sub> = 8 + 0(15/3)</b> <br>
+
+				x<sub>1</sub> = 8 <br><br>
+
+				&nbsp;Comprobación: <br>
+				&nbsp;9x ≡ 12 (mod 15) <br>
+				&nbsp;9(8)≡ 12 (mod 15) <br>
+				&nbsp;72 ≡ 12 (mod 15) <br>
+				Son congruentes ya que al dividir 72 y 12 entre m, que es 15, sus residuos son 12. <br><br>
+
+				<b>Para x<sub>2</sub> = 8 + 1(15/3) <br></b>
+				x<sub>2</sub> = 13 <br><br>
+
+				&nbsp;Comprobación: <br>
+				&nbsp;9x ≡ 12 (mod 15) <br>
+				&nbsp;9(13) ≡ 12 (mod 15) <br>
+				&nbsp;117 ≡ 12 (mod 15) <br>
+				 Son congruentes, ya que al dividir 117 y 12 entre m, que es 15, sus residuos son 12. <br><br>
+			
+				
+				<b>Para x<sub>3</sub> = 8 + 3(15/3) <br></b>
+
+				x<sub>3</sub> = 18 <br><br>
+
+				&nbsp;Comprobación: <br>
+				&nbsp;9x ≡ 12 (mod 15) <br>
+				&nbsp;9(18) ≡ 12 (mod 15) <br>
+				&nbsp;162 ≡ 12 (mod 15) <br>
+				 Son congruentes, ya que al dividir 162 y 12 entre m, que es 15, sus residuos son 12. <br><br>
+
+				Por lo tanto el conjunto solución es <b>x<sub>i</sub> = {8,13,18}</b> para que la expresión <b>9x ≡ 12 (mod 15)</b> sea congruente. <br><br><br>
+
+
+		</h5> 
+
+	<h1 style=" color: blueviolet;">Operaciones básicas</h1>
+		<h5>
+			<br>
+			<b>Suma:</b> Para sumar dos números en aritmética residual, simplemente sumamos los números y tomamos el residuo cuando dividimos por m.
+			<br><br>
+			Ejemplo: 
+			<br><br>
+			Calcular 7 + 6 (mod 5):
+			<li>Suma los números: Comienza sumando los dos números que deseas operar. En este caso, sumamos 7 y 6 para obtener 13.</li>
+			<li>Toma el residuo: Después de sumar los números, necesitas tomar el residuo cuando divides el resultado entre el módulo, que en este caso es 5. Entonces, divide 13 entre 5.</li>
+			<li>Calcula el residuo: La división de 13 entre 5 te dará un cociente de 2 y un residuo de 3.</li>
+			<li><b>Resultado final: El resultado final de 7 + 6 (mod 5) es 3</b>.</li>
+			<br><br><br>
+
+				<img src="media/img/suma-modulo.PNG" alt=""> <br><br><br>
+
+			<b>Resta:</b> Similar a la suma, para restar dos números en aritmética residual, restamos uno del otro y tomamos el residuo. 
+			<br><br>
+			Ejemplo:
+			<br><br>
+			Calcular 8 − 2 (mod5):
+			<li>Resta los números: Comienza restando el segundo número del primero. En este caso, restamos 2 de 8 para obtener 6.
+			</li>
+			<li>Verifica si es divisible por el módulo: Después de restar los números, verifica si el resultado es divisible por el módulo, que en este caso es 5. </li>
+			
+			<li>Comprueba la divisibilidad: Al restar 2 de 8, obtenemos 6, que es divisible entre 5.</li>
+
+			<li><b>Resultado final: El resultado final de 8 - 3 (mod 5) es 1</b>.</li>
+			<br><br><br>
+			
+			<img src="media/img/resta-modulo.PNG" alt=""> <br><br><br>
+		
+			<b>Multiplicación:</b> Para multiplicar dos números en aritmética residual, multiplicamos los números y luego tomamos el residuo.
+			<br><br>
+			Ejemplo:
+			<br><br>
+			Calcular 4×3(mod5):
+			<li>Multiplica los números: Comienza multiplicando los dos números dados. En este caso, multiplica 4 por 3 para obtener 12.</li>
+			<li>Verifica el residuo con el módulo: Después de obtener el resultado de la multiplicación, verifica el residuo cuando divides este número entre el módulo especificado, que es 5.</li>
+			<li>Calcula el residuo: Al dividir 12 entre 5, obtenemos un cociente de 2 y un residuo de 2.</li>
+			<li><b>Resultado final: Por lo tanto, el resultado final de 4 × 3 (mod 5) es 2</b>.</li>
+
+			<br><br><br>	
+			<img src="media/img/multiplicacion-modulo.PNG" alt=""> <br><br><br>
+
+
+			</ul>
+		</h5>
+
+	<h1 style = "color: blueviolet;">Inverso modular</h1>
+	  <br><br>
+		<h5>
+			En aritmética modular no tenemos una operación de división. Sin embargo, sí tenemos inversos modulares. <br>
+
+			El inverso modular de <b>a (mod m) es a<sup>-1</sup></b><br><br>
+
+			<center> <b>(a* a<sup>-1</sup>) ≡ 1 (mod m)</b> <br>
+			o de otra forma <br>
+			 <b>(a* a<sup>-1</sup> ) mod m = 1</b> <br><br> </center>
+
+			Sólo los primos relativos de <b>m</b>, que no comparten factores primos con <b>m</b>, tienen inverso modular (mod m) <br><br>
+
+			Procedimiento: <br><br>
+
+			1) Calcula <b>a*b mod m</b> para los valores <b>b</b> entre 0 y m-1 <br>
+			2) El inverso modular de <b>a (mod m)</b> es el valor <b>b</b> que hace que se cumpla que <b>a*b (mod m) = 1</b> <br><br>
+
+			Ejemplo: <br><br>
+
+			Para a = 3, m = 7 <br><br>
+
+			1) Encontrar a b que esté entre 0 y m-1, en este caso b está entre 0 y 6 <br><br><br>
+
+
+
+			<img src="media/img/inverso1-modulo.PNG" alt=""> <br><br><br>
+
+			2) Una vez encontrado el número que cumple con la condición <b>a*b (mod m) = 1</b> se puede decir que encontramos el <b>inverso modular</b> en este caso 5, ya que: <b>5*3 (mod 7) = 1</b> <br><br>
+			
+			Es importante tener en cuenta hay la posibilidad de que <b>no</b> exista el inverso modular, ya que a y m tienen que ser primos relativos. <br><br>
+
+			Ejemplo: <br><br>
+
+			Para a= 2 y m = 4 <br><br>
+
+			1) Encontrar a b que esté entre 0 y m-1, en este caso b está entre 0 y 3 <br><br><br>
+
+			<img src="media/img/inverso2-modulo.PNG" alt=""> <br><br><br>
+			
+			2) En este caso no se encuentra el inverso modular, ya que 2 y 4 no son primos relativos, comparten el factor 2. <br><br><br>
+
+		</h5>
+
+	<h1 style = "color: blueviolet;">Teorema de los restos chinos</h1> <br><br>
+
+		<h5>
+
+			<h2>El teorema de los restos chinos es un resultado de la aritmética modular, que permite resolver sistemas de congruencias lineales. 
+				<br><br>
+				El Teorema de los Restos Chinos, es llamado así, debido a que las versiones más antiguas sobre estos problemas de congruencias se encuentran en trabajos matemáticos chinos. 
+			<br><br>
+				El problema más antiguo se encuentra en el texto Sun Zi Suan Ching (Manual de Matemática de Sun Zi) escrito aproximadamente en el siglo III por el matemático chino Sun Zi, y corresponde al problema 26. 
+				<br><br>
+				El enunciado del problema de Sun Zi es el siguiente: 
+				<br><br>
+				<i>Tenemos un número de cosas, pero no sabemos exactamente la cantidad. Si las contamos de a tres, quedan dos sobrando. Si las contamos de a cinco, quedan tres sobrando. Si las contamos de a siete, quedan dos sobrando. ¿Cuántas cosas pueden ser?</i>
+					<br><br>
+				A continuación se describe la solución dada por Sun Zi en su obra:
+			<br><br>
+				<li>Determinó que se podía resolver usando los números 70, 21 y 15, que eran múltiplos de 5*7, de 3*7 y de 3*5 respectivamente.</li>
+				<li>Observó que la suma 2*70 + 3*21 + 2*15 igual a 233, es una solución del problema.</li>
+				<li>Luego, restó a 233 múltiplos de 3*5*7 tantas veces como fuera posible, obteniendo el número 23, siendo este número el menor entero positivo que resuelve el problema.</li>
+					<br><br>
+			
+				<b>Teorema</b> <br><br>
+			
+				<h2>Sean <em>k</em> números naturales <em>m<sub class="subindice">1</sub></em>, <em>m<sub class="subindice">2</sub></em>, ..., <em>m<sub class="subindice">k</sub></em> primos relativos dos a dos, y sean <em>k</em> números enteros <em>r<sub class="subindice">1</sub></em>, <em>r<sub class="subindice">2</sub></em>, ..., <em>r<sub class="subindice">k</sub></em>. El sistema de congruencias: 
+				</h2><br>
+				<h2>
+					<center><em>x ≡ r<sub class="subindice">1</sub> (mod m<sub class="subindice">1</sub>)</em><br>
+					<em>x ≡ r<sub class="subindice">2</sub> (mod m<sub class="subindice">2</sub>)</em><br>
+					…<br>
+					<em>x ≡ r<sub class="subindice">k</sub> (mod m<sub class="subindice">k</sub>)</em>		
+				</center>
+				</h2><br>
+				<h2>
+					Admite solución única módulo <em>M = m<sub class="subindice">1</sub> m<sub class="subindice">2</sub> ... m<sub class="subindice">k</sub></em>. Es decir, existe un único número entero <em>s</em> entre 0 y <em>M-1</em> que resuelve simultáneamente a todas las congruencias del sistema.
+				</h2><br>
+
+				
+				<h2>
+					<b>Demostración</b> <br><br>
+
+					Sea <em>M<sub class="subindice">i</sub> = M ÷ m<sub class="subindice">i</sub></em> para <em>i = 1, 2, …, k</em>.<br>
+				<b>a)</b> Para cada <em>i = 1, 2, …, k</em>:
+				<ul>
+				  <li><em>M<sub class="subindice">i</sub></em> y <em>m<sub class="subindice">i</sub></em> son primos relativos entre sí.</li>
+				  <li>Luego, existe <em>u<sub class="subindice">i</sub></em> tal que <em>u<sub class="subindice">i</sub>M<sub class="subindice">i</sub> ≡ 1 (mod m<sub class="subindice">i</sub>)</em></li>
+				  <li>Y se cumple: <em>u<sub class="subindice">1</sub>M<sub class="subindice">1</sub>r<sub class="subindice">1</sub> + u<sub class="subindice">2</sub>M<sub class="subindice">2</sub>r<sub class="subindice">2</sub> + ... + u<sub class="subindice">k</sub>M<sub class="subindice">k</sub>r<sub class="subindice">k</sub> ≡ r<sub class="subindice">i</sub> (mod m<sub class="subindice">i</sub>)</em></li>
+				</ul>
+				</h2><br>
+				<h2>
+					<b>b)</b> Por lo tanto:
+				  <li><em>X = u<sub class="subindice">1</sub>M<sub class="subindice">1</sub>r<sub class="subindice">1</sub> + u<sub class="subindice">2</sub>M<sub class="subindice">2</sub>r<sub class="subindice">2</sub> + ... + u<sub class="subindice">k</sub>M<sub class="subindice">k</sub>r<sub class="subindice">k</sub></em> es una solución del sistema de congruencias.</li>
+				</h2><br><br><br>
+		</h5>
+
+</body>
+
+</html>

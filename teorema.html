@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="Author" content="Equipo 5"><!--Autor-->
+	<script src="media/js/jq.js" type="text/javascript"></script>
+	<script src="media/js/m.js" type="text/javascript"></script>
+	<script src="media/js/ui.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="media/css/ui.css" type="text/css">
+	
+</head>
+<body>
+    <h1 style = "color:#B989FF" >Teorema chino de los restos.</h1>
+	<br><br>
+    
+	<h2>El teorema de los restos chinos es un resultado de la aritmética modular, que permite resolver sistemas de congruencias lineales. 
+	<br><br>
+	El Teorema de los Restos Chinos, es llamado así, debido a que las versiones más antiguas sobre estos problemas de congruencias se encuentran en trabajos matemáticos chinos. 
+<br><br>
+	El problema más antiguo se encuentra en el texto Sun Zi Suan Ching (Manual de Matemática de Sun Zi) escrito aproximadamente en el siglo III por el matemático chino Sun Zi, y corresponde al problema 26. 
+	<br><br>
+	El enunciado del problema de Sun Zi es el siguiente: 
+	<br><br>
+	<i>Tenemos un número de cosas, pero no sabemos exactamente la cantidad. Si las contamos de a tres, quedan dos sobrando. Si las contamos de a cinco, quedan tres sobrando. Si las contamos de a siete, quedan dos sobrando. ¿Cuántas cosas pueden ser?</i>
+		<br><br>
+	A continuación se describe la solución dada por Sun Zi en su obra:
+<br><br>
+	<li>Determinó que se podía resolver usando los números 70, 21 y 15, que eran múltiplos de 5*7, de 3*7 y de 3*5 respectivamente.</li>
+	<li>Observó que la suma 2*70 + 3*21 + 2*15 igual a 233, es una solución del problema.</li>
+	<li>Luego, restó a 233 múltiplos de 3*5*7 tantas veces como fuera posible, obteniendo el número 23, siendo este número el menor entero positivo que resuelve el problema.</li>
+		<br><br>
+
+	<h1 style = "color:#B989FF">Teorema Chino de los restos:</h1><br><br>
+
+	<h2>Sean <em>k</em> números naturales <em>m<sub class="subindice">1</sub></em>, <em>m<sub class="subindice">2</sub></em>, ..., <em>m<sub class="subindice">k</sub></em> primos relativos dos a dos, y sean <em>k</em> números enteros <em>r<sub class="subindice">1</sub></em>, <em>r<sub class="subindice">2</sub></em>, ..., <em>r<sub class="subindice">k</sub></em>. El sistema de congruencias: 
+	</h2><br>
+	<h2>
+		<center><em>x ≡ r<sub class="subindice">1</sub> (mod m<sub class="subindice">1</sub>)</em><br>
+		<em>x ≡ r<sub class="subindice">2</sub> (mod m<sub class="subindice">2</sub>)</em><br>
+		…<br>
+		<em>x ≡ r<sub class="subindice">k</sub> (mod m<sub class="subindice">k</sub>)</em>		
+	</center>
+	</h2><br>
+	<h2>
+		Admite solución única módulo <em>M = m<sub class="subindice">1</sub> m<sub class="subindice">2</sub> ... m<sub class="subindice">k</sub></em>. Es decir, existe un único número entero <em>s</em> entre 0 y <em>M-1</em> que resuelve simultáneamente a todas las congruencias del sistema.
+	</h2><br>
+	<h1 style = "color:#B989FF">Demostración</h1><br>
+	<h2>
+		Sea <em>M<sub class="subindice">i</sub> = M ÷ m<sub class="subindice">i</sub></em> para <em>i = 1, 2, …, k</em>.<br>
+    <b>a)</b> Para cada <em>i = 1, 2, …, k</em>:
+    <ul>
+      <li><em>M<sub class="subindice">i</sub></em> y <em>m<sub class="subindice">i</sub></em> son primos relativos entre sí.</li>
+      <li>Luego, existe <em>u<sub class="subindice">i</sub></em> tal que <em>u<sub class="subindice">i</sub>M<sub class="subindice">i</sub> ≡ 1 (mod m<sub class="subindice">i</sub>)</em></li>
+      <li>Y se cumple: <em>u<sub class="subindice">1</sub>M<sub class="subindice">1</sub>r<sub class="subindice">1</sub> + u<sub class="subindice">2</sub>M<sub class="subindice">2</sub>r<sub class="subindice">2</sub> + ... + u<sub class="subindice">k</sub>M<sub class="subindice">k</sub>r<sub class="subindice">k</sub> ≡ r<sub class="subindice">i</sub> (mod m<sub class="subindice">i</sub>)</em></li>
+    </ul>
+	</h2><br>
+	<h2>
+		<b>b)</b> Por lo tanto:
+      <li><em>X = u<sub class="subindice">1</sub>M<sub class="subindice">1</sub>r<sub class="subindice">1</sub> + u<sub class="subindice">2</sub>M<sub class="subindice">2</sub>r<sub class="subindice">2</sub> + ... + u<sub class="subindice">k</sub>M<sub class="subindice">k</sub>r<sub class="subindice">k</sub></em> es una solución del sistema de congruencias.</li>
+	</h2><br><br>
+
+	<h1 style = "color:#B989FF">Caso particular</h1><br>
+	<h2>Si m y n son dos números naturales primos relativos entre sí, entonces el sistema de congruencias lineales: 
+		<br><br>
+		x ≡ a (mod m)  
+		<br><br>
+		x ≡ b (mod n) 
+		<br><br>
+		tiene solución única módulo M = m⋅ n .  
+		<br><br><br>
+		</h2>
+</body>
+
+</html>

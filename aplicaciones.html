@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="Author" content="Equipo 5"><!--Autor-->
+	<script src="media/js/jq.js" type="text/javascript"></script>
+	<script src="media/js/m.js" type="text/javascript"></script>
+	<script src="media/js/ui.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="media/css/ui.css" type="text/css">
+	
+</head>
+<body>
+	<br><br><br>
+    
+	
+	
+	
+	<h1 style = "color:#B989FF" >Aplicaciones en computación</h1> <br><br><br>
+
+    <h1 style="color: blueviolet;">Criptografía</h1>
+	
+	
+	<h5><br><br><br>
+			La criptografía es el estudio de los métodos para enviar mensajes secretos. Se trata de que un mensaje dominado como “texto simple” pase a un “texto cifrado”. El receptor del texto cifrado utiliza “descifrado” para convertir el texto cifrado a un texto simple.<br><br>
+		
+			Actualmente existen distintos algoritmos para la codificación de mensajes, como lo es el <b>cifrado César</b> que consiste en la sustitución de cada letra de un mensaje por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto. El nombre de este método deriva del emperador romano Julio César, quien se dice lo utilizaba para comunicarse con sus generales.<br><br>
+
+			El cifrado César consiste en desplazar cada letra del mensaje original un número fijo de posiciones en el alfabeto. Por ejemplo, si elegimos un desplazamiento de 3, la letra A se convierte en D, la letra B en E, y así sucesivamente. Este proceso se realiza para cada letra del mensaje, lo que resulta en un mensaje cifrado. El cifrado César es un ejemplo simple de criptografía de sustitución, donde cada letra del alfabeto se sustituye por otra letra.<br><br>
+
+			Este algoritmo puede resultar no tan eficiente debido a que la decodificación es sencilla a comparación con la <b>RSA (Rivest-Shamir-Adleman)</b> que requiere de una metodología más compleja.<br><br>
+
+	<h1 style="color: blueviolet;">Algoritmo RSA</h1><br><br>
+		
+			<h5>El sistema criptográfico RSA fue descubierto por Rivest, Shamir y Adleman en 1977 y es el primer algoritmo en utilizar una clave generada que se utiliza con más frecuencia para asegurar la transferencia de datos a través de redes inseguras, como Internet. La base del algoritmo RSA se basa en la aritmética modular.
+			<br><br>
+
+			<b>Conceptos básicos:</b>
+			<br><br>
+				<b>Clave Pública y Privada:</b> En RSA, cada usuario tiene una clave pública y una clave privada. <br>
+				<b>Clave Pública:</b> Se utiliza para cifrar mensajes. <br>
+				<b>Clave Privada:</b> Se utiliza para descifrar mensajes.
+				<br><br>
+
+			<b>Pasos Algoritmo:</b>
+			<br><br>
+				<b>Generación de Claves:</b><br><br>
+
+				<li>El usuario elige dos números primos grandes, <i>p</i> y <i>q.</i> </li> <br>
+				<li>Calcula <i>n = p*q</i>, que es el módulo.</li> <br>
+				<li>Calcula <i>ɸ(n) = (p-1) * (q-1)</i> , que es la función <i>ɸ</i> de Euler de <i>n</i> </li> <br>
+				<li>Escoge un número e que sea coprimo con <i>ɸ(n)</i>. Este será el exponente de cifrado y es su clave pública.</li> <br>
+				<li>Calcula d como el inverso multiplicativo de <i>e</i> módulo <i>ɸ(n)</i> , es decir:
+				<i>d ≣ e<sup>-1</sup> (mod ɸ(n) )</i>  Este será el exponente de descifrado y es su clave privada.</li> <br>
+				<br>
+
+			<b>Cifrado:</b><br><br>
+
+				<li>Para cifrar un mensaje <b>M</b>, el usuario aplica la siguiente operación:</li> <br><br>
+					
+
+					<b><center>C ≣ M<sup>e</sup> (mod n)</center></b>
+					<br><br>
+
+					
+					<center> Donde <b>C</b> es el mensaje cifrado.</center>
+					<br><br>
+		
+			<b>Descifrado:</b><br><br>
+
+				<li> Para descifrar el mensaje cifrado <b>C</b> , el usuario aplica la siguiente operación:</li>
+				<br><br>
+					
+					<b><center>M ≣  C<sup>d</sup> (mod n)</center></b>
+					<br><br>
+				
+					<center>Donde <b>M</b> es el mensaje original.</center>
+					<br><br>
+
+					Nota: En este algoritmo n debe tener al menos 340 dígitos
+					<br><br>
+				
+			La aritmética modular se utiliza en el proceso de cifrado y descifrado para garantizar la seguridad de la comunicación. El módulo <i>n</i> es la base de las operaciones, y las claves pública y privada se utilizan para cifrar y descifrar los mensajes de forma segura.<br><br><br>
+		 
+	</h5>
+
+	<h1 style="color: blueviolet;">Algoritmo Hash</h1> <br><br><br>
+
+
+		<h5>
+			Una Tabla Hash o un Mapa Hash es una estructura de datos que asocia llaves (keys) con valores (values) utilizando una Función Hash; asimismo permite almacenar y recuperar datos de manera eficiente. <br><br>
+
+			Componentes: <br><br>
+
+			<li>Tabla: Un arreglo donde se almacenen los datos.</li> <br>
+			<li>Claves (keys): Elementos únicos que se utilizan para identificar los valores asociados.</li> <br>
+			<li>Valores(values): Datos asociados a cada clave.</li><br>
+			<li>Función Hash: Una función que toma una clave y devuelve un índice en el arreglo donde se almacenará el valor correspondiente.</li> <br><br>
+
+			<b>Funcionamiento</b> <br><br>
+
+			Para el funcionamiento de este algoritmo es necesario contar con una Función Hash que distribuya las claves de forma uniforme a través del arreglo y minimice las colisiones, las cuales sólo ocurren cuando una clave diferente se asigna al mismo índice. <br><br>
+
+			Una <b>Función Hash</b> transforma una clave en un índice en la tabla hash. Para que este índice sea válido dentro del tamaño de la tabla (que normalmente tiene una longitud m), se usa la aritmética de residuos, ya que la Función Hash a menudo incluye un paso que calcula el residuo de la división de la clave por el tamaño de la tabla. <br><br>
+
+			Ejemplo: <br><br>
+
+			Tenemos contactos que guardar en un arreglo de 10 índices. <br><br><br>
+
+			<img src="media/img/hash-1.PNG" alt=""> <br><br><br>
+
+			La Función Hash indica que se debe convertir cada letra a su valor ASCII para después sumar los valores y asignarlos a la Tabla Hash. <br><br>
+
+			En el caso de marcos: <br><br><br>
+
+			<img src="media/img/hash-2.PNG" alt=""> <br><br><br>
+
+			Posteriormente se suma: 109 + 97 +114 + 99 +111+ 115 = 645 <br><br>
+
+			Para asignarle un índice en la Tabla Hash se hace uso de la aritmética de residuos. Se toma al número de celdas disponibles como el módulo, en este caso 10. <br><br>
+
+			<center>645 mod 10 = 5 </center> <br>
+			Por lo que el contacto de marcos será guardado en la posición 5 de la tabla Hash: <br><br>
+
+			<img src="media/img/hash-3.PNG" alt=""> <br><br><br>
+
+			Para el contacto de lena: <br><br>
+
+			<img src="media/img/hash-4.PNG" alt=""> <br><br><br>
+
+			Se suman los números que componen el nombre: 109 +101+110+97 = 417 <br><br>
+
+			Se le asigna un índice en la Tabla Hash: <br><br>
+
+				<center>417  mod 10 = 7</center><br>
+				Por lo tanto será guardado en la celda 7 <br><br><br>
+
+				<img src="media/img/hash-5.PNG" alt=""> <br><br><br>
+			
+			Este procedimiento se repite en el caso de contar con más contactos para guardar en el arreglo. Cabe destacar que la Función Hash puede cambiar de acuerdo a las necesidades del algoritmo. Asimismo, existe la posibilidad de que dos claves pueden llegar a tener el mismo índice en la Tabla Hash, por lo cual hay estrategías específicas para el manejo de colisiones. <br><br>
+			
+			Hay varios métodos para manejar colisiones: <br><br>
+
+			1) <b>Encadenamiento</b>: Cada índice de la tabla apunta a una lista enlazada de todos los elementos que se asignan a ese índice. Si ocurre una colisión, el nuevo elemento se añade a la lista enlazada correspondiente. <br><br>
+
+
+			2) <b>Direccionamiento Abierto</b>: En lugar de utilizar listas enlazadas, este método encuentra otro índice en la tabla para almacenar el valor. Los métodos más comunes de direccionamiento abierto incluyen: <br><br>
+
+			<li>Sondeo Lineal (Linear Probing): Se busca secuencialmente el siguiente índice disponible.</li> 
+			<li>Sondeo Cuadrático (Quadratic Probing): Se busca el siguiente índice usando un desplazamiento cuadrático.</li>
+			<li>Hashing Doble (Double Hashing): Se aplica una segunda función hash para determinar el paso de búsqueda.</li> <br><br>
+
+			Las Tablas Hash son una útiles en el almacenamiento y la recuperación rápida de datos, siempre y cuando se utilice una Función Hash adecuada y se manejen correctamente las colisiones. Algunos de sus usos destacados están en la implementación de índices en bases de datos y almacenamiento de tablas de símbolos en compiladores. <br><br><br>
+			
+		</h5>
+	
+</body>
+
+</html>

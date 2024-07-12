@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="Author" content="Equipo 5"><!--Autor-->
+
+    <title>Sistemas algebraicos. La aritmética de residuos en las computadoras. Aplicaciones en las computadoras.</title>
+
+	<!--Descripción del tutorial-->
+	<meta name="Description" content="Sistemas algebraicos. La aritmética de residuos en las computadoras. Aplicaciones en las computadoras."/>
+	<!--Palabras clave-->
+	<meta name="Keywords" content="modulo, enteros, divisibilidad"/>
+    
+    
+	<script src="media/js/jq.js" type="text/javascript"></script>
+	<script src="media/js/m.js" type="text/javascript"></script>
+	<script src="media/js/ui.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="media/css/ui.css" type="text/css">
+</head>
+<body>
+
+    <h1 style="color:#B989FF ;">Resolución:</h1> <br><br><br>
+    <h2>
+
+        <center>x ≡ 3 (mod 5) <br>
+			x ≡ 4 (mod 7) <br>
+			x ≡ 5 (mod 11)</center>
+			 <br><br><br>
+
+
+    1) Encuentra el producto de los módulos: <br><br>
+    <div class="solucion" style="display: none;">	
+
+    <center><i>M = 5 * 7 * 11 = 385</i></center> <br><br>
+    
+    2) Calcula las "tasas de división" para cada congruencia: <br><br>
+    </div>
+    <div class="solucion" style="display: none;">	
+    <center><i>a1 = M / 5 = 385 / 5 = 77 <br>
+        a2 = M / 7 = 385 / 7 = 55 <br>
+        a3 = M / 11 = 385 / 11 = 35 <br>
+        </i></center> <br><br>
+
+    3) Encuentra las soluciones particulares: <br><br>
+    </div><div class="solucion" style="display: none;">	
+    <center><i>3 * 77 ≡ 231 ≡ 1 (mod 5) <br>
+        4 * 55 ≡ 220 ≡ 1 (mod 7) <br>
+        5 * 35 ≡ 175 ≡ 2 (mod 11) <br>
+        </i></center> <br><br>
+
+    4) Suma las soluciones particulares ponderadas para obtener la solución general: <br><br>
+    </div><div class="solucion" style="display: none;">	
+    <center><i>x ≡ (1 * 77 * 3) + (1 * 55 * 4) + (2 * 35 * 5) ≡ 231 + 220 + 350 ≡ 801 (mod 385)</i></center> <br><br>
+
+    5) Simplifica la solución a módulo 385 para obtener el resultado en el rango adecuado:
+    </div><div class="solucion" style="display: none;">	
+        <br><br>
+
+        <center><i>x ≡ 801 % 385 ≡ 31</i></center> <br><br>
+
+        La solución es x ≡ 31 (mod 385). <br>
+        El número entero x que satisface todas las congruencias es 31. 
+        </div><br><br><br><br>
+
+
+        <center> <a href="javascript:void(0);" onclick="mostrarSiguienteSolucion();">Siguiente</a> </center>
+        
+        <br><br><br>
+        
+        <center><a href="ejemplos.html">Regresar</a></center><br>
+ 
+        <script>
+            var currentSolucionIndex = 0;
+    
+            function mostrarSiguienteSolucion() {
+                var soluciones = document.querySelectorAll('.solucion');
+    
+                if (currentSolucionIndex < soluciones.length) {
+                    soluciones[currentSolucionIndex].style.display = 'block';
+                    currentSolucionIndex++;
+                }
+            }
+        </script> <br><br><br>
+    </h2>
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="Author" content="Equipo 5"><!--Autor-->
+
+    <title>Sistemas algebraicos. La aritmética de residuos en las computadoras. Aplicaciones en las computadoras.</title>
+
+	<!--Descripción del tutorial-->
+	<meta name="Description" content="Sistemas algebraicos. La aritmética de residuos en las computadoras. Aplicaciones en las computadoras."/>
+	<!--Palabras clave-->
+	<meta name="Keywords" content="modulo, enteros, divisibilidad"/>
+    
+    
+	<script src="media/js/jq.js" type="text/javascript"></script>
+	<script src="media/js/m.js" type="text/javascript"></script>
+	<script src="media/js/ui.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="media/css/ui.css" type="text/css">
+</head>
+<body>
+    
+
+    <h1 style="color:#B989FF ;">Resolución:</h1> <br><br><br>
+    <h2>
+        
+		1) Observar que 3,5 y 7 son primos relativos entre sí <br> <br>
+	</div></div><div class="solucion" style="display: none;">
+		
+		2) Primera congruencia x ≡ 2 (mod3) →  x = 2 + 3s <br> <br> </div>
+	<div class="solucion" style="display: none;">
+		3) Segunda Congruencia x ≡ 3 (mod 5) → <br> &nbsp&nbsp&nbsp 2 + 3s ≡ 3(mod5) → 3s ≡ 1(mod5) <br><br> </div>
+		<div class="solucion" style="display: none;">
+		&nbsp&nbsp&nbsp&nbspMultiplicando por 2: s≡ 2(mod5) → s = 2 + 5k <br>
+		&nbsp&nbsp&nbsp&nbspReemplazando en x = 2 + 3s se obtiene:
+		<br>&nbsp&nbsp&nbsp x = 2 + 3(2 + 5k) <br>
+		&nbsp&nbsp&nbsp&nbspLuego: x = 8 + 15k <br><br> 
+
+		4) Tercera congruencia  x ≡ 2 (mod7) → <br> &nbsp&nbsp&nbsp 8 + 15k ≡ 2 (mod7) → 15k ≡ -6 (mod7) <br><br> 
+	</div>
+	<div class="solucion" style="display: none;">
+		&nbsp&nbsp&nbsp&nbspComo 15 ≡ 1(mod7) y -6 ≡ 1(mod7) se obtiene: <br>
+		&nbsp&nbsp&nbsp k ≡ 1(mod7) <br>
+		&nbsp&nbsp&nbsp&nbspLuego: k = 1 + 7t <br><br> 
+		5) Sustituyendo en x = 8 + 15k, se obtiene: <br></div>
+	<div class="solucion" style="display: none;">
+		&nbsp&nbsp&nbsp&nbsp x = 8 + 15( 1 + 7t) <br>
+		&nbsp&nbsp&nbsp&nbspLuego, la solución general del sistema es: <br>
+		&nbsp&nbsp&nbsp&nbsp x = 23 + 105k <br>
+		&nbsp&nbsp&nbsp&nbspPor lo tanto, el ejército de Han Xing <br> 
+		&nbsp&nbsp&nbsp&nbsppuede tener como mínimo 23 soldados. <br><br><br><br>
+
+	</div>
+		<center> <a href="javascript:void(0);" onclick="mostrarSiguienteSolucion();">Siguiente</a> </center>
+        
+        <br><br><br>
+        
+        <center><a href="ejemplos.html">Regresar</a></center><br>
+ 
+        <script>
+            var currentSolucionIndex = 0;
+    
+            function mostrarSiguienteSolucion() {
+                var soluciones = document.querySelectorAll('.solucion');
+    
+                if (currentSolucionIndex < soluciones.length) {
+                    soluciones[currentSolucionIndex].style.display = 'block';
+                    currentSolucionIndex++;
+                }
+            }
+        </script>
+    </h2>
+
+
+</body>
+</html>

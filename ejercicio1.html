@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="Author" content="Equipo 5"><!--Autor-->
+
+    <title>Sistemas algebraicos. La aritmética de residuos en las computadoras. Aplicaciones en las computadoras.</title>
+
+	<!--Descripción del tutorial-->
+	<meta name="Description" content="Sistemas algebraicos. La aritmética de residuos en las computadoras. Aplicaciones en las computadoras."/>
+	<!--Palabras clave-->
+	<meta name="Keywords" content="modulo, enteros, divisibilidad"/>
+    
+    
+	<script src="media/js/jq.js" type="text/javascript"></script>
+	<script src="media/js/m.js" type="text/javascript"></script>
+	<script src="media/js/ui.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="media/css/ui.css" type="text/css">
+</head>
+<body>
+    <br><br><br>
+
+    <h1 style="color:#B989FF ;">Resolución:</h1> <br><br><br>
+    <h2>
+        Ejercicio de: Epp, S. S. (2012). Matemáticas Discretas Con Aplicaciones (4ta ed.). Cengage Learning. <br><br>
+
+        Para la solución de este ejercicio se necesita revisar cada uno de los incisos que se proponen como solución: <br><br>
+
+        <center>a) n = 54, d = 4	&nbsp&nbsp&nbsp	b) n = -54, d = 4 &nbsp&nbsp&nbsp	c) n =54, d = 70 </center><br><br>
+
+         <!-- Agregar un div para cada parte de la solución -->
+         <div class="solucion" style="display: none;">
+        a) Si se requiere encontrar los enteros que cumplan con la expresión: n = dq + r   con 0 ≤ r < d, sustituiremos los valores que nos da el inciso <b>a: n = 54 y d =4</b>. <br><br>
+        
+       <center> n = dq + r </center><br>
+        <center>54 = 4q + r </center><br>
+         
+        Para encontrar <b>d</b> y <b>r</b> es necesario descomponer al 54 en el producto de dos factores, uno de los cuales es el 4. Por lo tanto: <br><br>
+        
+        
+         </div>
+         <!-- Agregar un div para cada parte de la solución -->
+         <div class="solucion" style="display: none;">
+
+        <center>54 = 4q + r <br><br></center>
+        <center>se debe tener en cuenta que r va de 0 a 4 <br><br></center>
+        <center>54 = 4*13 + 2</center> <br><br>
+
+
+        Por lo tanto, para el inciso a se tiene: <br><br>
+         </div>
+
+         <div class="solucion" style="display: none;">
+        <center><b>54 = 4*13 + 2, con q= 13 y r= 2</b></center> <br><br><br>
+        </div>
+
+            <div class="solucion" style="display: none;">
+        b) Si se requiere encontrar los enteros que cumplan con la expresión: n = dq + r   con 0 ≤ r < d, sustituiremos los valores que nos da el inciso <b>b: n = -54  y d = 4</b>. <br><br>
+        
+            </div>
+            <div class="solucion" style="display: none;">
+        <center>n = dq + r <br><br> </center>
+        <center>-54 = 4q + r <br><br></center>
+        <center>En este caso se tiene que tomar en cuenta que r está en el rango de 0 a 4, pero al ser n negativa la dinámica cambia.<br><br>
+        -54 = 4*(-14) + r <br><br> </center>
+        Para conservar el signo negativo se requiere multiplicar por un número que nos de una cifra mayor a n <br><br>
+        <center>-54 = -56 + r </center><br> 
+        <center>-54 = -56 + 2</center> <br><br>
+            </div>
+            <div class="solucion" style="display: none;">
+
+        Por lo tanto, para el inciso b se tiene: <br><br>
+
+        <center><b> -54 = 4*(-14) + 2, con q= -14 y r= 2</b></center> <br><br><br>
+            </div>
+            <div class="solucion" style="display: none;">
+        c) Si se requiere encontrar los enteros que cumplan con la expresión: n = dq + r   con 0 ≤ r < d, sustituiremos los valores que nos da el inciso <b>c: n = 54  y d = 70</b>. <br><br>
+        
+        <center>n = dq + r <br></center>
+        <center>54 = 70q + r <br> </center>
+        <center>54 = 70*(0) + r <br> </center>
+        <center>54 = 0 + r <br></center>
+        <center>54 = 0 + 54 <br><br></center>
+            </div>
+            <div class="solucion" style="display: none;">
+        Por lo tanto, para el inciso c se tiene: <br><br>
+
+        <center><b> 54 = 70*(0) + 54, con q= 0 y r= 54</b></center> <br><br><br>
+        
+            </div>
+
+       <center> <a href="javascript:void(0);" onclick="mostrarSiguienteSolucion();">Siguiente</a> </center>
+        
+        <br><br><br>
+        
+        <center><a href="ejemplos.html">Regresar</a></center><br>
+
+        <script>
+            var currentSolucionIndex = 0;
+    
+            function mostrarSiguienteSolucion() {
+                var soluciones = document.querySelectorAll('.solucion');
+    
+                if (currentSolucionIndex < soluciones.length) {
+                    soluciones[currentSolucionIndex].style.display = 'block';
+                    currentSolucionIndex++;
+                }
+            }
+        </script>
+        
+        <br><br><br>
+
+    </h2>
+    
+
+
+</body>
+</html>

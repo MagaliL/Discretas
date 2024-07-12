@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="Author" content="Equipo 5"><!--Autor-->
+
+    <title>Sistemas algebraicos. La aritmética de residuos en las computadoras. Aplicaciones en las computadoras.</title>
+
+	<!--Descripción del tutorial-->
+	<meta name="Description" content="Sistemas algebraicos. La aritmética de residuos en las computadoras. Aplicaciones en las computadoras."/>
+	<!--Palabras clave-->
+	<meta name="Keywords" content="modulo, enteros, divisibilidad"/>
+    
+    
+	<script src="media/js/jq.js" type="text/javascript"></script>
+	<script src="media/js/m.js" type="text/javascript"></script>
+	<script src="media/js/ui.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="media/css/ui.css" type="text/css">
+</head>
+<body>
+
+    <h1 style="color:#B989FF ;">Resolución:</h1> <br><br><br>
+   
+    <h2> 
+        Ejercicio de: Epp, S. S. (2012). Matemáticas Discretas Con Aplicaciones (4ta ed.). Cengage Learning. <br><br>
+
+        Hay 365 días en un año que no es un año bisiesto y cada semana tiene 7 días. <br>
+		Ahora: <br><br>
+
+		<div class="solucion" style="display: none;">
+		<center><i>365/7 = 52 y <br>
+             365 mod 7 = 1
+		</i></center> <br><br>
+
+	</div>
+	<div class="solucion" style="display: none;">
+		Ya que 365 = 52 * 7 + 1. Así, 52 semanas, o 364 días, a partir de hoy será un martes y 365 días para que a partir de hoy será un día más tarde, es decir: <b>miércoles</b>. <br><br>
+
+		En términos más generales, si DíaT es el día de la semana de hoy y DíaN hoy es el día de la semana en N días, entonces: <br><br>
+		
+		<center><i>DíaN = (DíaT + N) mod 7 </i></center> <br><br><br><br>
+	
+</div>
+        <center> <a href="javascript:void(0);" onclick="mostrarSiguienteSolucion();">Siguiente</a> </center>
+        
+			<br><br><br>
+			
+			<center><a href="ejemplos.html">Regresar</a></center><br>
+	
+			<script>
+				var currentSolucionIndex = 0;
+		
+				function mostrarSiguienteSolucion() {
+					var soluciones = document.querySelectorAll('.solucion');
+		
+					if (currentSolucionIndex < soluciones.length) {
+						soluciones[currentSolucionIndex].style.display = 'block';
+						currentSolucionIndex++;
+					}
+				}
+			</script>
+			
+    </h2>    
+
+</body>
+</html>

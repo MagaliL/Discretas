@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="Author" content="Equipo 5"><!--Autor-->
+	<script src="media/js/jq.js" type="text/javascript"></script>
+	<script src="media/js/m.js" type="text/javascript"></script>
+	<script src="media/js/ui.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="media/css/ui.css" type="text/css">
+
+    <title>Directorio de Contactos</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<br><br><br>
+   <div> <h1 style="color:#B989FF">Directorio de Contactos</h1>
+
+   Instrucciones: <br><br>
+
+        1) Elige el módulo, que será la cantidad de celdas que tendrá el arreglo. <br> 
+        2) Da clic en "Inicializar la tabla". <br>
+        3) Ingresa un nombre. <br>
+        4) Elige la acción que desea realizar: "Agregar contacto", "Buscar Contacto" o "Borrar contacto". <br>
+        5) Da clic en "Mostrar lista de contactos". <br><br>
+    
+    
+    <label for="modulo">Definir Modulo (Tamaño de la tabla): </label>
+    <input type="number" id="modulo" min="1" value="10">
+    <button onclick="inicializarTabla()">Inicializar Tabla</button>
+    <br><br>
+    <label for="nombre">Nombre: </label>
+    <input type="text" id="nombre">
+    <button onclick="agregarContacto()">Agregar Contacto</button>
+    <button onclick="buscarContacto()">Buscar Contacto</button>
+    <button onclick="borrarContacto()">Borrar Contacto</button>
+    <br><br>
+    <button onclick="mostrarContactos()">Mostrar Lista de Contactos</button>
+    <br><br>
+    <div id="mensaje"></div>
+    <br><br>
+    <table id="tablaContactos">
+        <thead>
+            <tr>
+                <th>Celda</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        let tablaHash = [];
+        let modulo = 10;
+
+        function inicializarTabla() {
+            limpiarMensaje();
+            modulo = parseInt(document.getElementById('modulo').value);
+            tablaHash = new Array(modulo).fill(null);
+            mostrarMensaje('Tabla inicializada con tamaño ' + modulo);
+        }
+
+        function hash(nombre, operacion) {
+            limpiarMensaje();
+            let hashValue = 0;
+            let detalles = [];
+            for (let i = 0; i < nombre.length; i++) {
+                let charValue = nombre.charCodeAt(i);
+                detalles.push(nombre.charAt(i) + ' = ' + charValue);
+                hashValue += charValue;
+            }
+            let detallesStr = detalles.join(', ');
+            mostrarMensaje(operacion + '.1 Obtenemos el valor numérico de cada caracter de acuerdo al ASCII: ' + detallesStr);
+            mostrarMensaje(operacion + '.2 Obtenemos la suma de los valores numéricos obtenidos: ' + hashValue);
+            let modValue = hashValue % modulo;
+            mostrarMensaje(operacion + '.3 Obtenemos el módulo del resultado de la suma: ' + hashValue + ' mod ' + modulo + ' = ' + modValue);
+            return modValue;
+        }
+
+        function agregarContacto() {
+            limpiarMensaje();
+            let nombre = document.getElementById('nombre').value.trim();
+            if (!nombre) {
+                mostrarMensaje('Por favor ingrese un nombre.');
+                return;
+            }
+            
+            let index = hash(nombre, '1');
+            let originalIndex = index;
+            let encontrado = false;
+            let pasos = 0;
+
+            // Verificar si el nombre ya existe y encontrar la posición para agregarlo
+            while (tablaHash[index] !== null) {
+                pasos++;
+                if (tablaHash[index] === nombre) {
+                    mostrarMensaje('El nombre ya está registrado.');
+                    return;
+                }
+                index = (index + 1) % modulo;
+                if (index === originalIndex) {
+                    mostrarMensaje('No hay espacio en la tabla.');
+                    return;
+                }
+                mostrarMensaje('1.4 La celda ' + (index - 1) + ' está ocupada, movemos a la siguiente celda: ' + index);
+            }
+            
+            // Agregar el nombre en la celda encontrada
+            tablaHash[index] = nombre;
+            mostrarMensaje('Contacto agregado con éxito en la celda ' + index + '.');
+            if (pasos > 0) {
+                mostrarMensaje('Se recorrieron ' + pasos + ' lugares.');
+            }
+        }
+
+        function buscarContacto() {
+            limpiarMensaje();
+            let nombre = document.getElementById('nombre').value.trim();
+            if (!nombre) {
+                mostrarMensaje('Por favor ingrese un nombre.');
+                return;
+            }
+            let index = hash(nombre, '2');
+            let originalIndex = index;
+            let pasos = 0;
+
+            // Buscar el nombre en la tabla
+            while (tablaHash[index] !== null) {
+                if (tablaHash[index] === nombre) {
+                    mostrarMensaje('El contacto ' + nombre + ' existe en la celda ' + index + '.');
+                    return;
+                }
+                pasos++;
+                index = (index + 1) % modulo;
+                if (index === originalIndex) {
+                    break;
+                }
+                mostrarMensaje('2.4 La celda ' + (index - 1) + ' no contiene el contacto, movemos a la siguiente celda: ' + index);
+            }
+            mostrarMensaje('El contacto ' + nombre + ' no está registrado.');
+        }
+
+        function borrarContacto() {
+            limpiarMensaje();
+            let nombre = document.getElementById('nombre').value.trim();
+            if (!nombre) {
+                mostrarMensaje('Por favor ingrese un nombre.');
+                return;
+            }
+            let index = hash(nombre, '3');
+            let originalIndex = index;
+            let pasos = 0;
+
+            // Buscar y borrar el nombre en la tabla
+            while (tablaHash[index] !== null) {
+                if (tablaHash[index] === nombre) {
+                    tablaHash[index] = null;
+                    mostrarMensaje('Contacto eliminado con éxito.');
+                    return;
+                }
+                pasos++;
+                index = (index + 1) % modulo;
+                if (index === originalIndex) {
+                    break;
+                }
+                mostrarMensaje('3.4 La celda ' + (index - 1) + ' no contiene el contacto, movemos a la siguiente celda: ' + index);
+            }
+            mostrarMensaje('El contacto ' + nombre + ' no fue encontrado.');
+        }
+
+        function mostrarContactos() {
+            limpiarMensaje();
+            let tabla = document.getElementById('tablaContactos').getElementsByTagName('tbody')[0];
+            tabla.innerHTML = '';
+            for (let i = 0; i < modulo; i++) {
+                let row = tabla.insertRow();
+                let cell1 = row.insertCell(0);
+                let cell2 = row.insertCell(1);
+                cell1.innerHTML = i;
+                cell2.innerHTML = tablaHash[i] !== null ? tablaHash[i] : '';
+            }
+        }
+
+        function mostrarMensaje(mensaje) {
+            let mensajeDiv = document.getElementById('mensaje');
+            mensajeDiv.innerText += mensaje + '\n';
+        }
+
+        function limpiarMensaje() {
+            document.getElementById('mensaje').innerText = '';
+        }
+    </script> </div>
+</body>
+</html>
