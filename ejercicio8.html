@@ -19,57 +19,97 @@
 	<link rel="stylesheet" href="media/css/ui.css" type="text/css">
 </head>
 <body>
+    <br><br><br>
 
-    <h1 style="color:#B989FF ;">Resolución:</h1> <br><br><br>
+    <h1 style="color:#B989FF ;">Solución:</h1> <br><br><br>
     <h2>
 
-        <center>x ≡ 3 (mod 5) <br>
-			x ≡ 4 (mod 7) <br>
-			x ≡ 5 (mod 11)</center>
+        <b>Ejercicio 8.</b> Para cada uno de los siguientes valores de <b>n</b> y <b>d</b>, encuentre los enteros <b>q</b> y <b>r</b> tales que <b>n = dq + r</b> y <b>0 ≤ r < d</b>.
+
+<center><b>n = dq + r</b></center> <br><br>
+
+<center><b>0 ≤ r < d</b></center> <br><br><br>
+
+
+a) n = 54, d = 4 <br>
+b) n = -54, d = 4    <br> 
+c) n =54, d = 70
 			 <br><br><br>
+        <small>Ejercicio de: Epp, S. S. (2012). Matemáticas Discretas Con Aplicaciones (4ta ed.). Cengage Learning.</small> <br><br>
+
+        Para la solución de este ejercicio se necesita revisar cada uno de los incisos que se proponen como solución: <br><br>
+
+        <center>a) n = 54, d = 4	&nbsp&nbsp&nbsp	b) n = -54, d = 4 &nbsp&nbsp&nbsp	c) n =54, d = 70 </center><br><br>
+
+         <!-- Agregar un div para cada parte de la solución -->
 
 
-    1) Encuentra el producto de los módulos: <br><br>
-    <div class="solucion" style="display: none;">	
+         <div class="solucion" style="display: none;">
+        a) Si se requiere encontrar los enteros que cumplan con la expresión: n = dq + r   con 0 ≤ r < d, sustituiremos los valores que nos da el inciso <b>a: n = 54 y d =4</b>. <br><br>
+        
+       <center> n = dq + r </center><br>
+        <center>54 = 4q + r </center><br>
+         
+        Para encontrar <b>d</b> y <b>r</b> es necesario descomponer al 54 en el producto de dos factores, uno de los cuales es el 4. Por lo tanto: <br><br>
+        
+        
+         </div>
+         <!-- Agregar un div para cada parte de la solución -->
+         <div class="solucion" style="display: none;">
 
-    <center><i>M = 5 * 7 * 11 = 385</i></center> <br><br>
-    
-    2) Calcula las "tasas de división" para cada congruencia: <br><br>
-    </div>
-    <div class="solucion" style="display: none;">	
-    <center><i>a1 = M / 5 = 385 / 5 = 77 <br>
-        a2 = M / 7 = 385 / 7 = 55 <br>
-        a3 = M / 11 = 385 / 11 = 35 <br>
-        </i></center> <br><br>
-
-    3) Encuentra las soluciones particulares: <br><br>
-    </div><div class="solucion" style="display: none;">	
-    <center><i>3 * 77 ≡ 231 ≡ 1 (mod 5) <br>
-        4 * 55 ≡ 220 ≡ 1 (mod 7) <br>
-        5 * 35 ≡ 175 ≡ 2 (mod 11) <br>
-        </i></center> <br><br>
-
-    4) Suma las soluciones particulares ponderadas para obtener la solución general: <br><br>
-    </div><div class="solucion" style="display: none;">	
-    <center><i>x ≡ (1 * 77 * 3) + (1 * 55 * 4) + (2 * 35 * 5) ≡ 231 + 220 + 350 ≡ 801 (mod 385)</i></center> <br><br>
-
-    5) Simplifica la solución a módulo 385 para obtener el resultado en el rango adecuado:
-    </div><div class="solucion" style="display: none;">	
-        <br><br>
-
-        <center><i>x ≡ 801 % 385 ≡ 31</i></center> <br><br>
-
-        La solución es x ≡ 31 (mod 385). <br>
-        El número entero x que satisface todas las congruencias es 31. 
-        </div><br><br><br><br>
+        <center>54 = 4q + r <br><br></center>
+        <center>se debe tener en cuenta que r va de 0 a 4 <br><br></center>
+        <center>54 = 4*13 + 2</center> <br><br>
 
 
-        <center> <a href="javascript:void(0);" onclick="mostrarSiguienteSolucion();">Siguiente</a> </center>
+        Por lo tanto, para el inciso a se tiene: <br><br>
+         </div>
+
+         <div class="solucion" style="display: none;">
+        <center><b>54 = 4*13 + 2, con q= 13 y r= 2</b></center> <br><br><br>
+        </div>
+
+            <div class="solucion" style="display: none;">
+        b) Si se requiere encontrar los enteros que cumplan con la expresión: n = dq + r   con 0 ≤ r < d, sustituiremos los valores que nos da el inciso <b>b: n = -54  y d = 4</b>. <br><br>
+        
+            </div>
+            <div class="solucion" style="display: none;">
+        <center>n = dq + r <br><br> </center>
+        <center>-54 = 4q + r <br><br></center>
+        <center>En este caso se tiene que tomar en cuenta que r está en el rango de 0 a 4, pero al ser n negativa la dinámica cambia.<br><br>
+        -54 = 4*(-14) + r <br><br> </center>
+        Para conservar el signo negativo se requiere multiplicar por un número que nos de una cifra mayor a n <br><br>
+        <center>-54 = -56 + r </center><br> 
+        <center>-54 = -56 + 2</center> <br><br>
+            </div>
+            <div class="solucion" style="display: none;">
+
+        Por lo tanto, para el inciso b se tiene: <br><br>
+
+        <center><b> -54 = 4*(-14) + 2, con q= -14 y r= 2</b></center> <br><br><br>
+            </div>
+            <div class="solucion" style="display: none;">
+        c) Si se requiere encontrar los enteros que cumplan con la expresión: n = dq + r   con 0 ≤ r < d, sustituiremos los valores que nos da el inciso <b>c: n = 54  y d = 70</b>. <br><br>
+        
+        <center>n = dq + r <br></center>
+        <center>54 = 70q + r <br> </center>
+        <center>54 = 70*(0) + r <br> </center>
+        <center>54 = 0 + r <br></center>
+        <center>54 = 0 + 54 <br><br></center>
+            </div>
+            <div class="solucion" style="display: none;">
+        Por lo tanto, para el inciso c se tiene: <br><br>
+
+        <center><b> 54 = 70*(0) + 54, con q= 0 y r= 54</b></center> <br><br><br>
+        
+            </div>
+
+       <center> <a href="javascript:void(0);" onclick="mostrarSiguienteSolucion();">Siguiente</a> </center>
         
         <br><br><br>
         
         <center><a href="ejemplos.html">Regresar</a></center><br>
- 
+
         <script>
             var currentSolucionIndex = 0;
     
@@ -81,8 +121,13 @@
                     currentSolucionIndex++;
                 }
             }
-        </script> <br><br><br>
+        </script>
+        
+        <br><br><br>
+
     </h2>
     
+
+
 </body>
 </html>
