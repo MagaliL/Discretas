@@ -20,26 +20,32 @@
 </head>
 <body>
 
-    <h1 style="color:#B989FF ;">Resolución:</h1> <br><br><br>
+    <h1 style="color:#B989FF ;">Solución:</h1> <br><br><br>
    
     <h2> 
-        Ejercicio de: Epp, S. S. (2012). Matemáticas Discretas Con Aplicaciones (4ta ed.). Cengage Learning. <br><br>
+		<b>Ejercicio 4.</b> Cálculo del día de la semana. Suponga que hoy es martes y ni este año ni el próximo es un año bisiesto. ¿Qué día de la semana va a ser en  año a partir de hoy?<br><br>	
+        <small>Ejercicio de: Epp, S. S. (2012). Matemáticas Discretas Con Aplicaciones (4ta ed.). Cengage Learning.</small> <br><br>
 
-        Hay 365 días en un año que no es un año bisiesto y cada semana tiene 7 días. <br>
-		Ahora: <br><br>
+		<b>Objetivo:</b>  Revisar y practicar el cálculo del día de la semana utilizando aritmética modular para evaluar la comprensión de conceptos básicos como el residuo y cómo se comportan las operaciones aritméticas bajo el módulo. <br><br>
+
+        
 
 		<div class="solucion" style="display: none;">
-		<center><i>365/7 = 52 y <br>
-             365 mod 7 = 1
-		</i></center> <br><br>
+
+		Se comienza reconociendo que hay 365 días en un año, que no es un año bisiesto, y cada semana tiene 7 días. <br><br>
+			Ahora, se obtendrán el número de semanas en el año: <br><br>
+		<center>365 ÷ 7 = 52  <br> </center> <br><br>
+
+		Luego, se considera que una semana tiene 7 días, y mediante la operación de módulo se puede determinar cuántos días sobran al considerar que un año tiene 52 semanas completas. <br><br>
+        
+		<center>365 mod 7 = 1</center> <br><br>
 
 	</div>
 	<div class="solucion" style="display: none;">
-		Ya que 365 = 52 * 7 + 1. Así, 52 semanas, o 364 días, a partir de hoy será un martes y 365 días para que a partir de hoy será un día más tarde, es decir: <b>miércoles</b>. <br><br>
+		Ya que <b>365 = 52 * 7 + 1</b>. Así, 52 semanas, o 364 días, a partir de hoy será un martes y 365 días para que a partir de hoy será un día más tarde, es decir: <b>miércoles</b>. <br><br><br><br>
 
-		En términos más generales, si DíaT es el día de la semana de hoy y DíaN hoy es el día de la semana en N días, entonces: <br><br>
 		
-		<center><i>DíaN = (DíaT + N) mod 7 </i></center> <br><br><br><br>
+		<b><center>Fin del ejercicio.</center></b> <br><br>
 	
 </div>
         <center> <a href="javascript:void(0);" onclick="mostrarSiguienteSolucion();">Siguiente</a> </center>

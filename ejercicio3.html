@@ -20,14 +20,72 @@
 </head>
 <body>
     
-    <h1 style="color:#B989FF ;">Resolución:</h1> <br><br><br>
+    <h1 style="color:#B989FF ;">Solución:</h1> <br><br><br>
     <h2>
-    55*26 (mod 4) <br>
-    1430÷4 = 357 + <b>2</b><br>
-    El módulo es = 2 <br>
-    Por lo tanto: 55*26 ≡ 2 (mod 4) <br><br><br><br>
+        <b>Ejercicio 3.</b> Determine 55*26 (mod 4) <br><br>
 
+    <b>Objetivo:</b>  entender cómo se aplica la aritmética modular a operaciones de multiplicación y a comprobar que los métodos y pasos son consistentes al trabajar con residuos. <br><br>
+
+
+    Para encontrar la solución al ejercicio es posible aplicar diferentes técnicas; sin embargo, en esta ocasión se utilizará el procedimiento abordado anteriormente. <br><br>
+
+    Dado que se tiene un producto: 
+     <br><br>  
+
+    <div class="solucion" style="display: none;">
+
+        Multiplicar 55 por 26: <br><br>
+        <center>55*26 (mod 4) <br>
+            1430 (mod 4) </center> <br><br>
+    </div>
+
+
+ <div class="solucion" style="display: none;">
+    Se divide el resultado del producto entre módulo indicado, en este caso es el 4. <br><br>
+
+    <center>1430÷4 = 357 + <b>r</b></center><br>
+
+    El resultado es 357; sin embargo, esta operación no es una división exacta y se necesita encontrar un número <b>r</b> que complete la igualdad. <br><br> 
+
+    <center> 1430÷4 = 357 + <b>r</b> <br>
+        1430÷4 = 357 + <b>2</b></center> <br><br>
+
+
+ </div>
+
+
+ <div class="solucion" style="display: none;">
+    El módulo es <b>2</b> <br>
+    Por lo tanto: 55*26 ≡ 2 (mod 4) <br><br>
+    <br><br>
+
+    <center><b>Fin del ejercicio.</b></center>
+
+    </div>
+
+    <br>
+    <br>
+
+
+    <center> <a href="javascript:void(0);" onclick="mostrarSiguienteSolucion();">Siguiente</a> </center>
+
+        <br><br><br>
     <center><a href="ejemplos.html">Regresar</a></center><br>
+
+
+<!--Código para que muestre siguiente parte -->
+    <script>
+        var currentSolucionIndex = 0;
+
+        function mostrarSiguienteSolucion() {
+            var soluciones = document.querySelectorAll('.solucion');
+
+            if (currentSolucionIndex < soluciones.length) {
+                soluciones[currentSolucionIndex].style.display = 'block';
+                currentSolucionIndex++;
+            }
+        }
+    </script>
        
     </h2>
 
