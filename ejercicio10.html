@@ -21,37 +21,66 @@
 <body>
     
 
-    <h1 style="color:#B989FF ;">Resolución:</h1> <br><br><br>
+    <h1 style="color:#B989FF ;">Solución:</h1> <br><br><br>
     <h2>
         
-		1) Observar que 3,5 y 7 son primos relativos entre sí <br> <br>
-	</div></div><div class="solucion" style="display: none;">
+		<b>Ejercicio 10. </b> <br><br>Cifrar el mensaje "OPENAI" utilizando el algoritmo RSA. Usar los siguientes valores para generar las claves y realiza el cifrado con: <br><br>
+
+		<center>p = 17</center>
+		<center>q = 19</center>
+		<br><br><br>
+
+		<b>Objetivo:</b> Desarrollar la habilidad para aplicar conceptos de aritmética de residuos en el contexto de la criptografía, específicamente en el algoritmo RSA, y comprender su papel en la cifrado de mensajes. <br><br>
 		
-		2) Primera congruencia x ≡ 2 (mod3) →  x = 2 + 3s <br> <br> </div>
 	<div class="solucion" style="display: none;">
-		3) Segunda Congruencia x ≡ 3 (mod 5) → <br> &nbsp&nbsp&nbsp 2 + 3s ≡ 3(mod5) → 3s ≡ 1(mod5) <br><br> </div>
-		<div class="solucion" style="display: none;">
-		&nbsp&nbsp&nbsp&nbspMultiplicando por 2: s≡ 2(mod5) → s = 2 + 5k <br>
-		&nbsp&nbsp&nbsp&nbspReemplazando en x = 2 + 3s se obtiene:
-		<br>&nbsp&nbsp&nbsp x = 2 + 3(2 + 5k) <br>
-		&nbsp&nbsp&nbsp&nbspLuego: x = 8 + 15k <br><br> 
+	
+			<b>Generación de claves:</b><br><br><br>
 
-		4) Tercera congruencia  x ≡ 2 (mod7) → <br> &nbsp&nbsp&nbsp 8 + 15k ≡ 2 (mod7) → 15k ≡ -6 (mod7) <br><br> 
-	</div>
-	<div class="solucion" style="display: none;">
-		&nbsp&nbsp&nbsp&nbspComo 15 ≡ 1(mod7) y -6 ≡ 1(mod7) se obtiene: <br>
-		&nbsp&nbsp&nbsp k ≡ 1(mod7) <br>
-		&nbsp&nbsp&nbsp&nbspLuego: k = 1 + 7t <br><br> 
-		5) Sustituyendo en x = 8 + 15k, se obtiene: <br></div>
-	<div class="solucion" style="display: none;">
-		&nbsp&nbsp&nbsp&nbsp x = 8 + 15( 1 + 7t) <br>
-		&nbsp&nbsp&nbsp&nbspLuego, la solución general del sistema es: <br>
-		&nbsp&nbsp&nbsp&nbsp x = 23 + 105k <br>
-		&nbsp&nbsp&nbsp&nbspPor lo tanto, el ejército de Han Xing <br> 
-		&nbsp&nbsp&nbsp&nbsppuede tener como mínimo 23 soldados. <br><br><br><br>
+			Para comenzar a resolver este problema es necesario calcular el valor de <b>n</b> y <b>φ(n)</b> y seleccionar un valor adecuado de <b>e</b>. <br><br>
+
+			p = 17, q = 19 <br>
+			<b>n = p * q</b>  →  17 * 19 = 323 <br>
+			<b>φ(n) = (p-1) * (q-1)</b> → 16 * 18 = 288 <br><br><br>
+
+			Ahora se selecciona un valor para <b>e</b>. Elegimos e = 5; ya que es primo y coprimo con 288. <br><br>
+
+			<center>Por lo tanto, la clave pública es (e, n) = (5, 323).</center> <br><br>
 
 	</div>
-		<center> <a href="javascript:void(0);" onclick="mostrarSiguienteSolucion();">Siguiente</a> </center>
+
+	<div class="solucion" style="display: none;">
+
+		<b>Cifrado del Mensaje "OPENAI"</b><br><br><br>
+
+		Obtener los valores de cada letra de la palabra en código ASCII. <br><br>
+	
+		<center>O = 79, P = 80, E = 69, N = 78, A = 65, I = 73</center><br><br>
+
+		Se utiliza cifra cada letra con el módulo tomando la clave pública (5, 323) <br><br>
+
+		<b><center>C ≣ M<sup>e</sup> (mod n)</center></b>
+					<br><br>
+		<center> Donde <b>C</b> es el mensaje cifrado.</center>
+					<br><br>
+
+		O = 79<sup>5</sup> (mod 323) ≣ 58 <br>
+		P = 80<sup>5</sup> (mod 323) ≣ 275 <br>
+		E = 69<sup>5</sup> (mod 323) ≣ 258 <br>
+		N = 78<sup>5</sup> (mod 323) ≣ 295 <br>
+		A = 65<sup>5</sup> (mod 323) ≣ 77 <br>
+		I = 73<sup>5</sup> (mod 323) ≣ 58 <br><br>
+
+		<b>El mensaje cifrado es: (58, 275, 258, 295, 77, 58)</b> <br><br><br><br>
+		<br>
+       <b><center>Fin del ejercicio.</center></b> <br><br>
+
+	</div>
+	
+	
+	
+	
+	
+	<center> <a href="javascript:void(0);" onclick="mostrarSiguienteSolucion();">Siguiente</a> </center>
         
         <br><br><br>
         

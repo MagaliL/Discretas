@@ -22,7 +22,7 @@
 
     <h1 style="color:#B989FF ;">Solución:</h1> <br><br><br>
     <h2>
-		<b>Ejercicio 5.</b> Supongamos que <b>m</b> es un número entero. Si <b>m mod 11 = 6</b>, ¿qué es  <b>4m mod 11</b>?
+		<b>Ejercicio 5.</b> Supongamos que <b>m</b> es un número entero. Si <b>m (mod 11) = 6</b>, ¿qué es  <b>4m (mod 11)</b>?
 		 <br><br>
 
         <small>Ejercicio de: Epp, S. S. (2012). Matemáticas Discretas Con Aplicaciones (4ta ed.). Cengage Learning.</small> <br><br>
@@ -31,42 +31,44 @@
 
 		<div class="solucion" style="display: none;">
 
-        Debido a que <i>m mod</i> 11 = 6, se obtiene el residuo  cuando <i>m</i>  divido entre 11 es 6. Esto significa que, de acuerdo al Teorema del cociente y del residuo, hay algún entero <i>q</i>, tal que: <br><br>
+        Debido a que <i>m (mod 11) = 6</i>, se obtiene el residuo  cuando <i>m</i>  divido entre 11 es 6. Esto implica que se puede deducir la existencia de un número entero <i>q</i> tal que, al multiplicarlo por 11 y sumarle el residuo, que en este caso es 6, se obtiene <i>m</i>.<br><br>
 
 		<center><i>m = 11q + 6</i></center><br>
 
-		<center>¿Qué es 4 <i>m mod</i> 11?</center><br><br>
+		Considerando lo anterior: <br><br>
+
+		<center>¿Qué es <i>4m (mod 11)</i>?</center><br><br>
 		</div>
 
 		<div class="solucion" style="display: none;">
         
-		Se sustituye <i>m = 11q + 6 </i> en la expresión <i>4m mod 11</i> <br><br>
+		Para comenzar, se debe tener en cuenta que ya contamos con <i>m</i>, por lo que se sustituye <i>m = 11q + 6 </i> en la expresión <i>4m (mod 11)</i> para luego realizar el producto: 4(11q + 6).  <br><br>
 
-		Se realiza el producto: 4(11q + 6) <br><br>
-
+		
                      <center>4m = 44q + 24</center> <br>
 		
-		Se reescribe <b>4m = 44q + 24</b> en términos de mod 11 <br><br>
+		Se reescribe <i>4m = 44q + 24</i> en términos de mod 11 <br><br>
 
-                    <center>4m mod 11= (44q + 24) mod 11  <br><br></center>
+                    <center><b>4m (mod 11)= (44q + 24) mod 11</b><br><br></center>
+					
                     
 		
-		Se observa que 44 es un múltiplo de 11, por lo que 44𝑞 mod 11 = 0. Por lo tanto: <br><br>
+		44 es un múltiplo de 11, por lo que <b>44q (mod 11) = 0</b>. Por lo tanto: <br><br>
 
-		<center>4m mod 11 = 24 mod 11</center><br><br>
+		<center><b>4m (mod 11) = 24 (mod 11)</b></center><br><br>
 
 			
 
 		</div>
 		<div class="solucion" style="display: none;">	
 
-		Se calcula el 24 mod 11. <br><br>
+		Se calcula el 24 (mod 11). <br><br>
 
-		<center>24 mod 11 = 2</center><br><br>
+		<center>24 (mod 11) = 2</center><br><br>
 
-		Por lo tanto, el residuo cuando 4𝑚 se divide entre 11 es 2. <br><br><br><br>
+		Por lo tanto, <b>4m (mod 11) = 2</b><br><br><br><br>
 
-		<b><center><i>4m mod 11 = 2</i></center></b><br><br><br><br>
+		
 		<b><center>Fin del ejercicio.</center></b> <br><br>
 
 		
