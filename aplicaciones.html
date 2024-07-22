@@ -23,17 +23,17 @@
 	
 	
 	<h5><br><br><br>
-			La criptografía es el estudio de los métodos para enviar mensajes secretos. Se trata de que un mensaje dominado como “texto simple” pase a un “texto cifrado”. El receptor del texto cifrado utiliza “descifrado” para convertir el texto cifrado a un texto simple.<br><br>
+			La criptografía es el estudio de los métodos para enviar mensajes secretos. Se trata de que un mensaje denominado como “texto simple” pase a un “texto cifrado”. El receptor del texto cifrado utiliza “descifrado” para convertir el texto cifrado a un texto simple.<br><br>
 		
 			Actualmente existen distintos algoritmos para la codificación de mensajes, como lo es el <b>cifrado César</b> que consiste en la sustitución de cada letra de un mensaje por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto. El nombre de este método deriva del emperador romano Julio César, quien se dice lo utilizaba para comunicarse con sus generales.<br><br>
 
-			El cifrado César consiste en desplazar cada letra del mensaje original un número fijo de posiciones en el alfabeto. Por ejemplo, si elegimos un desplazamiento de 3, la letra A se convierte en D, la letra B en E, y así sucesivamente. Este proceso se realiza para cada letra del mensaje, lo que resulta en un mensaje cifrado. El cifrado César es un ejemplo simple de criptografía de sustitución, donde cada letra del alfabeto se sustituye por otra letra.<br><br>
+			 Por ejemplo, si elegimos un desplazamiento de 3, la letra A se convierte en D, la letra B en E, y así sucesivamente. Este proceso se realiza para cada letra del mensaje, lo que resulta en un mensaje cifrado. El cifrado César es un ejemplo simple de criptografía de sustitución, donde cada letra del alfabeto se sustituye por otra letra.<br><br>
 
 			Este algoritmo puede resultar no tan eficiente debido a que la decodificación es sencilla a comparación con la <b>RSA (Rivest-Shamir-Adleman)</b> que requiere de una metodología más compleja.<br><br>
 
 	<h1 style="color: blueviolet;">Algoritmo RSA</h1><br><br>
 		
-			<h5>El sistema criptográfico RSA fue descubierto por Rivest, Shamir y Adleman en 1977 y es el primer algoritmo en utilizar una clave generada que se utiliza con más frecuencia para asegurar la transferencia de datos a través de redes inseguras, como Internet. La base del algoritmo RSA se basa en la aritmética modular.
+			<h5>El sistema criptográfico RSA fue descubierto por Rivest, Shamir y Adleman en 1977 y es el primer algoritmo en utilizar una clave generada que se usa para asegurar la transferencia de datos a través de redes inseguras, como Internet. La base del algoritmo RSA se basa en la aritmética modular.
 			<br><br>
 
 			<b>Conceptos básicos:</b>
@@ -118,9 +118,9 @@
 
 			Posteriormente se suma: 109 + 97 +114 + 99 +111+ 115 = 645 <br><br>
 
-			Para asignarle un índice en la Tabla Hash se hace uso de la aritmética de residuos. Se toma al número de celdas disponibles como el módulo, en este caso 10. <br><br>
+			Para asignarle un índice al valor del nombre en la Tabla Hash se hace uso de la aritmética de residuos. Se toma al número de celdas disponibles como el módulo, en este caso 10. <br><br>
 
-			<center>645 mod 10 = 5 </center> <br>
+			<center>645 (mod 10) = 5 </center> <br>
 			Por lo que el contacto de marcos será guardado en la posición 5 de la tabla Hash: <br><br>
 
 			<img src="media/img/hash-3.PNG" alt=""> <br><br><br>
@@ -129,11 +129,11 @@
 
 			<img src="media/img/hash-4.PNG" alt=""> <br><br><br>
 
-			Se suman los números que componen el nombre: 109 +101+110+97 = 417 <br><br>
+			Se suman los números que componen el nombre: <br> 109 +101+110+97 = 417 <br><br>
 
 			Se le asigna un índice en la Tabla Hash: <br><br>
 
-				<center>417  mod 10 = 7</center><br>
+				<center>417  (mod 10) = 7</center><br>
 				Por lo tanto será guardado en la celda 7 <br><br><br>
 
 				<img src="media/img/hash-5.PNG" alt=""> <br><br><br>
@@ -151,7 +151,7 @@
 			<li>Sondeo Cuadrático (Quadratic Probing): Se busca el siguiente índice usando un desplazamiento cuadrático.</li>
 			<li>Hashing Doble (Double Hashing): Se aplica una segunda función hash para determinar el paso de búsqueda.</li> <br><br>
 
-			Las Tablas Hash son una útiles en el almacenamiento y la recuperación rápida de datos, siempre y cuando se utilice una Función Hash adecuada y se manejen correctamente las colisiones. Algunos de sus usos destacados están en la implementación de índices en bases de datos y almacenamiento de tablas de símbolos en compiladores. <br><br><br>
+			Las Tablas Hash son útiles en el almacenamiento y la recuperación rápida de datos, siempre y cuando se utilice una Función Hash adecuada y se manejen correctamente las colisiones. Algunos de sus usos destacados están en la implementación de índices en bases de datos y almacenamiento de tablas de símbolos en compiladores. <br><br><br>
 			
 		</h5>
 	

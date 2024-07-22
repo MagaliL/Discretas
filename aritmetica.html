@@ -30,13 +30,10 @@
 
 
 			<img src="media/img/Tiposderepresentacion.PNG" alt="representacion de datos">
-			<center>Coronado, J. (2014)</center> <br><br>
+			<small><center>Coronado, J. (2014)</center> <br><br></small>
 
 
-
-
-
-			Es importante señalar que la <b>representación numérica</b> tiene una gran influencia en la arquitectura de las máquinas, ya que es fundamental para la codificación de cantidades y la organización de la aritmética computacional.<br><br>
+			Es importante señalar que la <b>representación numérica</b> tiene gran influencia en la arquitectura de las máquinas, ya que es fundamental para la codificación de cantidades y la organización de la aritmética computacional.<br><br>
 
 			No obstante, investigaciones recientes han demostrado que los <b>sistemas numéricos posicionales</b> no son suficientes para lograr un aumento significativo en la velocidad de procesamiento de la información, ni para mejorar los niveles de desempeño y productividad. Además, los acarreos generados durante la ejecución de sus operaciones aumentan la complejidad del sistema y requieren más hardware para su procesamiento.<br><br>
 			
@@ -49,12 +46,12 @@
 
 	    <h5> 
 
-			AQUÍ <br><br>
+			<br><br>
 			La aritmética residual, también conocida como aritmética modular o aritmética de congruencia, es un área de las matemáticas que se centra en el estudio de los <b>números enteros</b> en relación con un número fijo llamado <b>módulo</b>. Esta área tiene aplicaciones prácticas en campos como la criptografía, la informática, la teoría de números y la ingeniería. <br><br>
 
 			La aritmética modular se enfoca en cómo se comportan los números enteros cuando los consideramos en grupos de tamaño fijo determinado por el módulo. Por ejemplo: si consideramos los números enteros módulo 5, estamos agrupando todos los enteros en cinco conjuntos diferentes, según su residuo al dividirlos por 5.<br><br>
 			
-			Esta área del conocimiento permite realizar todas las operaciones aritméticas (<b>suma, resta y multiplicación</b>), excepto la división, que son por principio procedimientos sin acarreos. Cada dígito en el resultado es una función sólo de dígitos correspondientes a los operandos.<br><br>
+			Esta área del conocimiento permite realizar las operaciones aritméticas: <b>suma, resta y multiplicación</b>, excepto la división, que son procedimientos sin acarreos. <br><br>
 		</h5>
 	
 	<h1 style="color: blueviolet;">Congruencia </h1> <br><br>
@@ -68,15 +65,17 @@
 
 			Por ejemplo, si tomamos los números enteros <b>7</b> y <b>17</b>, ambos son congruentes módulo <b>5</b>, ya que su diferencia es <b>17−7=10</b>, que es un múltiplo de <b>5</b>.<br><br>
 			
-			Asimismo, una de las ventajas de trabajar con este concepto es la posibilidad de manejar <b>clases de equivalencia de números enteros</b>. En lugar de operar con números individuales, operamos con clases de números que comparten el mismo residuo módulo m. Estas clases se conocen como <b>clases de congruencia</b> y están formadas por todos los números enteros que son congruentes entre sí módulo m.<br><br>
+			Asimismo, una de las ventajas de trabajar con este concepto es la posibilidad de manejar <b>clases de equivalencia de números enteros</b>. En lugar de operar con números individuales, operamos con clases de números que comparten el mismo residuo módulo m. Estas clases se conocen como <b>clases de congruencia</b> y están formadas por todos los números enteros que son congruentes entre sí.<br><br>
 
-			Para comprender mejor el concepto de congruencia y las clases de congruencia con el siguiente ejemplo: <br>
+			Para comprender mejor el concepto de congruencia y las clases de congruencia con el siguiente ejemplo: <br><br>
 
-			Si calculamos mod 5 para todos los enteros. Se supone que se etiquetan 5 rebanadas (0,1,2,3,4) y para cada número entero, al dividirlo por 5, se le clasifica de acuerdo a su residuo. <br><br><br><br>
+			Si calculamos mod 5 para todos los enteros. Se suponen 5 clasificaciones de acuerdo al residuo (0,1,2,3,4) para cada número. <br><br><br><br>
 
-			<img src="media/img/congruenciaclases.PNG" alt=""> <br><br><br><br>
+			<img src="media/img/congruenciaclases.PNG" alt=""> 
+			<small><center>Khan Academy (2024)</center></small><br><br><br>
 
-			Así 27 iría en la rebanada etiquetada con el número 2 porque 27 mod 5 = 2 y para expresar los números que pertenecen a la misma rebanada que el 27, es decir de la misma clase de congruencia, se usa la expresión anterior: <br><br>
+
+			Así 27 iría en la rebanada etiquetada con el número 2 porque 27 (mod 5) = 2 y para expresar los números que pertenecen a la misma rebanada que el 27, es decir de la misma clase de congruencia, se usa la expresión: <br><br>
 
 			<b><center>a ≡ b (mod m)</center></b> <br><br>
 
@@ -85,10 +84,10 @@
 			26 ≡ 11 (mod 5) <br>
 
 			26 es congruente a 11 módulo 5 <br>
-			26 mod 5 = 1 <br>
-			11 mod 5 = 1 <br> <br>
+			26 (mod 5) = 1 <br>
+			11 (mod 5) = 1 <br> <br>
 
-			26 y 11 tienen el mismo residuo, tienen la misma clase de congruencia <br><br>
+			26 y 11 tienen el mismo residuo, tienen la misma clase de congruencia. <br><br>
 
 			<!-- 
 			<b>Propiedades de congruencia:</b> <br><br>
@@ -97,103 +96,6 @@
 
 			 -->
 
-			<b>Teorema de congruencia lineal</b> <br><br>
-
-			Sean <b>a</b> y <b>b</b> dos números enteros y <b>m</b> un entero positivo, entonces la congruencia se describe: <br><br>
-
-			<center><b>ax ≡ b (mod m)</b></center> <br><br>
-
-			En la que una solución para <b>x</b> si y sólo si b es divisible por el máximo común divisor de <b>a</b> y <b>m</b>. Existirán exactamente soluciones <b>d = mcd(a,m)</b> en el conjunto de residuos si y sólo si <b>b/d</b><br><br>
-
-			Una vez se encuentra x<sub>0</sub>, las demás soluciones se encuentran de acuerdo a la siguiente expresión: <br><br>
-			
-				<center><b>{x<sub>0</sub> + km/d} </b></center> <br><br>
-			
-			donde x<sub>0</sub> es una solución particular y <b>0 ≤ k < d</b> <br><br><br>
-
-			Ejemplo: <br><br>
-
-							
-				Encontrar todas las soluciones <br><br>
-
-				<center>9x ≡ 12 (mod 15)</center> <br><br>
-
-				1) Encontrar el máximo común divisor de <b>a</b> y <b>m</b><br>
-
-				<b>mcd (9,15) = 3</b> ; por lo tanto la expresión tiene 3 soluciones, <b>d = 3</b>. <br><br>
-
-				2) Desglosar a <b>a</b> y <b>m</b>: <br><br>
-
-				15 = 9*1 + <b>6</b>  -> 9*1 es 9, 9+6 = 15 <br>
-				9 = 6*1 + <b>3</b>    -> 6*1 es 6, 6+3 = 9 <br><br>
-
-				Una vez encontrado el residuo 3, que es el mcd de <b>a</b> y <b>m</b>. <br><br> 
-
-				3) Despejar  residuos: <br><br>
-
-				6 = 15 - 9*1 <br>
-				3 = 9 - 6*1 <br><br><br>
-
-				4) Se toma el despeje que contenga al mcd de <b>a</b> y <b>m</b>, y sustituye con los factores obtenidos. <br><br>
-
-				3= 9 - 6*1  -> se sustituye a 6 con el despeje anterior y se simplifica: <br><br>
-
-				3= 9 - (15 - 9*1)*1 <br>
-				3= 9 - (15 + 9*1) <br>
-				3= 9 - 15 * 9 <br>
-				3= 9*2 - 15 <br><br>
-
-				5) Multiplicar a la expresión por un número que nos de <b>b</b>, en este caso 12. <br><br>
-
-				4(3 = 9*2 - 15) <br>
-				12 =<b> 9*8 </b>- 15*4 <br><br>
-
-				de acuerdo a la expresión original: <br><br>
-
-				<center>9x ≡ 12 (mod 15) <br>
-
-				x<sub>0</sub> = 8 <br><br></center>
-
-
-				6) A partir de x0 se pueden encontrar las otras dos soluciones utilizando: <br><br>
-
-				<center><b>{x<sub>0</sub> + km/d} </b></center> <br>
-				<center><b>0 ≤ k < d</b></center><br>
-				<center><b>k= {0,1,2}</b></center>
-
-				x<sub>0</sub>= 8 <br><br>
-
-				<b>Para x<sub>1</sub> = 8 + 0(15/3)</b> <br>
-
-				x<sub>1</sub> = 8 <br><br>
-
-				&nbsp;Comprobación: <br>
-				&nbsp;9x ≡ 12 (mod 15) <br>
-				&nbsp;9(8)≡ 12 (mod 15) <br>
-				&nbsp;72 ≡ 12 (mod 15) <br>
-				Son congruentes ya que al dividir 72 y 12 entre m, que es 15, sus residuos son 12. <br><br>
-
-				<b>Para x<sub>2</sub> = 8 + 1(15/3) <br></b>
-				x<sub>2</sub> = 13 <br><br>
-
-				&nbsp;Comprobación: <br>
-				&nbsp;9x ≡ 12 (mod 15) <br>
-				&nbsp;9(13) ≡ 12 (mod 15) <br>
-				&nbsp;117 ≡ 12 (mod 15) <br>
-				 Son congruentes, ya que al dividir 117 y 12 entre m, que es 15, sus residuos son 12. <br><br>
-			
-				
-				<b>Para x<sub>3</sub> = 8 + 3(15/3) <br></b>
-
-				x<sub>3</sub> = 18 <br><br>
-
-				&nbsp;Comprobación: <br>
-				&nbsp;9x ≡ 12 (mod 15) <br>
-				&nbsp;9(18) ≡ 12 (mod 15) <br>
-				&nbsp;162 ≡ 12 (mod 15) <br>
-				 Son congruentes, ya que al dividir 162 y 12 entre m, que es 15, sus residuos son 12. <br><br>
-
-				Por lo tanto el conjunto solución es <b>x<sub>i</sub> = {8,13,18}</b> para que la expresión <b>9x ≡ 12 (mod 15)</b> sea congruente. <br><br><br>
 
 
 		</h5> 
@@ -209,10 +111,10 @@
 			<li>Suma los números: Comienza sumando los dos números que deseas operar. En este caso, sumamos 7 y 6 para obtener 13.</li>
 			<li>Toma el residuo: Después de sumar los números, necesitas tomar el residuo cuando divides el resultado entre el módulo, que en este caso es 5. Entonces, divide 13 entre 5.</li>
 			<li>Calcula el residuo: La división de 13 entre 5 te dará un cociente de 2 y un residuo de 3.</li>
-			<li><b>Resultado final: El resultado final de 7 + 6 (mod 5) es 3</b>.</li>
+			<li><b>El resultado final de 7 + 6 (mod 5) es 3</b>.</li>
 			<br><br><br>
 
-				<img src="media/img/suma-modulo.PNG" alt=""> <br><br><br>
+				
 
 			<b>Resta:</b> Similar a la suma, para restar dos números en aritmética residual, restamos uno del otro y tomamos el residuo. 
 			<br><br>
@@ -225,10 +127,10 @@
 			
 			<li>Comprueba la divisibilidad: Al restar 2 de 8, obtenemos 6, que es divisible entre 5.</li>
 
-			<li><b>Resultado final: El resultado final de 8 - 3 (mod 5) es 1</b>.</li>
+			<li><b>El resultado final de 8 - 3 (mod 5) es 1</b>.</li>
 			<br><br><br>
 			
-			<img src="media/img/resta-modulo.PNG" alt=""> <br><br><br>
+		
 		
 			<b>Multiplicación:</b> Para multiplicar dos números en aritmética residual, multiplicamos los números y luego tomamos el residuo.
 			<br><br>
@@ -238,19 +140,17 @@
 			<li>Multiplica los números: Comienza multiplicando los dos números dados. En este caso, multiplica 4 por 3 para obtener 12.</li>
 			<li>Verifica el residuo con el módulo: Después de obtener el resultado de la multiplicación, verifica el residuo cuando divides este número entre el módulo especificado, que es 5.</li>
 			<li>Calcula el residuo: Al dividir 12 entre 5, obtenemos un cociente de 2 y un residuo de 2.</li>
-			<li><b>Resultado final: Por lo tanto, el resultado final de 4 × 3 (mod 5) es 2</b>.</li>
+			<li><b> Por lo tanto, el resultado final de 4 × 3 (mod 5) es 2</b>.</li>
 
-			<br><br><br>	
-			<img src="media/img/multiplicacion-modulo.PNG" alt=""> <br><br><br>
-
+			<br><br>	
+		
 
 			</ul>
 		</h5>
 
-	<h1 style = "color: blueviolet;">Inverso modular</h1>
-	  <br><br>
 		<h5>
-			En aritmética modular no tenemos una operación de división. Sin embargo, sí tenemos inversos modulares. <br>
+			<b>Inverso modular</b> <br><br>
+			En aritmética modular no existe una operación de división. Sin embargo, sí hay inversos modulares. <br><br>
 
 			El inverso modular de <b>a (mod m) es a<sup>-1</sup></b><br><br>
 
@@ -275,7 +175,7 @@
 
 			<img src="media/img/inverso1-modulo.PNG" alt=""> <br><br><br>
 
-			2) Una vez encontrado el número que cumple con la condición <b>a*b (mod m) = 1</b> se puede decir que encontramos el <b>inverso modular</b> en este caso 5, ya que: <b>5*3 (mod 7) = 1</b> <br><br>
+			2) Una vez encontrado el número que cumple con la condición <b>a*b (mod m) = 1</b> se puede decir que se tiene el <b>inverso modular</b>, en este caso 5, ya que: <br><b>5*3 (mod 7) = 1</b> <br><br>
 			
 			Es importante tener en cuenta hay la posibilidad de que <b>no</b> exista el inverso modular, ya que a y m tienen que ser primos relativos. <br><br>
 
