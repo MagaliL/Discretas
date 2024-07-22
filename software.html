@@ -27,29 +27,32 @@
 
   <br><br><br> 
 <h1 style="color:#B989FF">Calculadora de Módulo</h1>
-<br><br><br><br>
+<br><br>
 
 <!--Código entre el div-->
 <!-- Código de la cálculadora de módulo -->
-<div>
 
-  <p>Introduce dos números enteros, selecciona una operación y establece el módulo que deseas utilizar para calcular el residuo. </p> <br><br>
+<h2>Intrucir números enteros, selecciona una operación y establece el módulo que deseas utilizar para calcular el residuo.</h2> <br><br>
+<div>
     
   <form id="moduloForm">
-    <label for="numero1">Primer número:</label>
-    <input type="text" id="numero1" name="numero1" required pattern="\d+" title="Introduce un número entero"><br><br>
-
-    <label for="numero2">Segundo número:</label>
-    <input type="text" id="numero2" name="numero2" required pattern="\d+" title="Introduce un número entero"><br><br>
-
+    
     <label for="operacion">Operación:</label>
     <select id="operacion" name="operacion" required>
       <option value="">Seleccione una operación</option>
       <option value="suma">Suma</option>
       <option value="resta">Resta</option>
       <option value="multiplicacion">Multiplicación</option>
-      <option value="division">División</option>
+      <option value="modulo">Módulo</option>
     </select><br><br>
+
+    <div id="numeros">
+      <label for="numero1">Primer número:</label>
+      <input type="text" id="numero1" name="numero1" pattern="\d+" title="Introduce un número entero"><br><br>
+
+      <label for="numero2">Segundo número:</label>
+      <input type="text" id="numero2" name="numero2" pattern="\d+" title="Introduce un número entero"><br><br>
+    </div>
     
     <label for="modulo">Módulo:</label>
     <input type="text" id="modulo" name="modulo" required pattern="\d+" title="Introduce un número entero"><br><br>
@@ -66,7 +69,16 @@
     document.getElementById("moduloForm").reset();
     document.getElementById("resultado").innerHTML = "";
     document.getElementById("pasos").innerHTML = "";
+    document.getElementById("numeros").style.display = 'block';
   }
+
+  document.getElementById('operacion').addEventListener('change', function() {
+    if (this.value === 'modulo') {
+      document.getElementById('numero2').style.display = 'none';
+    } else {
+      document.getElementById('numero2').style.display = 'block';
+    }
+  });
 
   document.getElementById('moduloForm').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -76,11 +88,11 @@
     var operacion = document.getElementById('operacion').value;
     var modulo = parseInt(document.getElementById('modulo').value);
     
-    if (isNaN(numero1) || isNaN(numero2) || isNaN(modulo)) {
-      alert('Por favor, introduce números enteros.');
+    if (isNaN(modulo) || isNaN(numero1) || (operacion !== 'modulo' && isNaN(numero2))) {
+      alert('Por favor, introduce números válidos.');
       return;
     }
-    
+
     var resultado;
     var pasos = [];
 
@@ -91,12 +103,6 @@
         pasos.push("2. Se calcula el residuo de la suma respecto al módulo: (" + numero1 + " + " + numero2 + ") % " + modulo + " = " + resultado);
         break;
       case 'resta':
-        if (numero1 < numero2) {
-          document.getElementById('resultado').innerHTML = '';
-          document.getElementById('pasos').innerHTML = '';
-          alert('El primer número debe ser mayor o igual que el segundo para la operación de resta.');
-          return;
-        }
         resultado = (numero1 - numero2) % modulo;
         pasos.push("1. Se resta el segundo número al primero: " + numero1 + " - " + numero2);
         pasos.push("2. Se calcula el residuo de la resta respecto al módulo: (" + numero1 + " - " + numero2 + ") % " + modulo + " = " + resultado);
@@ -106,18 +112,9 @@
         pasos.push("1. Se multiplica los números dados: " + numero1 + " * " + numero2);
         pasos.push("2. Se calcula el residuo de la multiplicación respecto al módulo: (" + numero1 + " * " + numero2 + ") % " + modulo + " = " + resultado);
         break;
-      case 'division':
-        if (numero2 === 0) {
-          alert('No se puede dividir por cero.');
-          return;
-        }
-        if (numero1 % numero2 !== 0) {
-          alert('El primer número debe ser mayor al segundo.');
-          return;
-        }
-        resultado = (numero1 / numero2) % modulo;
-        pasos.push("1. Se divide el primer número por el segundo: " + numero1 + " / " + numero2);
-        pasos.push("2. Se calcula el residuo de la división respecto al módulo: (" + numero1 + " / " + numero2 + ") % " + modulo + " = " + resultado);
+      case 'modulo':
+        resultado = numero1 % modulo;
+        pasos.push("1. Se calcula el residuo del número respecto al módulo: " + numero1 + " % " + modulo + " = " + resultado);
         break;
       default:
         resultado = 'Operación no válida';
@@ -127,10 +124,9 @@
     document.getElementById('pasos').innerHTML = '<h3>Pasos:</h3><ol>' + pasos.map(step => '<li>' + step + '</li>').join('') + '</ol>';
   });
   </script>
+
 </div>
-
-<br><br><br><br><br>
-
+<br><br><br>
 
 
 
